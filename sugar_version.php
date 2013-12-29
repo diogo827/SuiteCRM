@@ -32,7 +32,7 @@
  * these Appropriate Legal Notices must retain the display of the "Powered by
  * SugarCRM" logo. If the display of the logo is not reasonably feasible for
  * technical reasons, the Appropriate Legal Notices must display the words
- * "Powered by SugarCRM".
+ * "Powered by SugarCRMA".
  ********************************************************************************/
 
 
