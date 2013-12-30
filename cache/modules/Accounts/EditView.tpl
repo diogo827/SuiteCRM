@@ -155,57 +155,57 @@ title='' tabindex='0'  >
 <table border="0" cellspacing="1" cellpadding="0" class="edit" width="100%">
 <tr>
 <td valign="top" id="billing_address_street_label" width='25%' scope='row' >
-<label for="billing_address_street">{sugar_translate label='LBL_BILLING_STREET' module=''}:</label>
+<label for='billing_address_street'>{sugar_translate label='LBL_STREET' module=''}:</label>
 {if $fields.billing_address_street.required || false}
 <span class="required">{$APP.LBL_REQUIRED_SYMBOL}</span>
 {/if}
 </td>
 <td width="*">
-<textarea id="billing_address_street" name="billing_address_street" maxlength="150" rows="2" cols="30" tabindex="0">{$fields.billing_address_street.value}</textarea>
+<textarea id="billing_address_street" name="billing_address_street" maxlength="150" rows="2" cols="30"    >{$fields.billing_address_street.value}</textarea>
 </td>
 </tr>
 <tr>
 <td id="billing_address_city_label" width='%' scope='row' >
-<label for="billing_address_city">{sugar_translate label='LBL_CITY' module=''}:
+<label for='billing_address_city'>{sugar_translate label='LBL_CITY' module=''}:</label>
 {if $fields.billing_address_city.required || false}
 <span class="required">{$APP.LBL_REQUIRED_SYMBOL}</span>
 {/if}
 </td>
 <td>
-<input type="text" name="billing_address_city" id="billing_address_city" size="30" maxlength='150' value='{$fields.billing_address_city.value}' tabindex="0">
+<input type="text" name="billing_address_city" id="billing_address_city" size="30" maxlength='150' value='{$fields.billing_address_city.value}'  >
 </td>
 </tr>
 <tr>
 <td id="billing_address_state_label" width='%' scope='row' >
-<label for="billing_address_state">{sugar_translate label='LBL_STATE' module=''}:</label>
+<label for='billing_address_state'>{sugar_translate label='LBL_STATE' module=''}:</label>
 {if $fields.billing_address_state.required || false}
 <span class="required">{$APP.LBL_REQUIRED_SYMBOL}</span>
 {/if}
 </td>
 <td>
-<input type="text" name="billing_address_state" id="billing_address_state" size="30" maxlength='150' value='{$fields.billing_address_state.value}' tabindex="0">
+<input type="text" name="billing_address_state" id="billing_address_state" size="30" maxlength='150' value='{$fields.billing_address_state.value}'  >
 </td>
 </tr>
 <tr>
 <td id="billing_address_postalcode_label" width='%' scope='row' >
-<label for="billing_address_postalcode">{sugar_translate label='LBL_POSTAL_CODE' module=''}:</label>
+<label for='billing_address_postalcode'>{sugar_translate label='LBL_POSTAL_CODE' module=''}:</label>
 {if $fields.billing_address_postalcode.required || false}
 <span class="required">{$APP.LBL_REQUIRED_SYMBOL}</span>
 {/if}
 </td>
 <td>
-<input type="text" name="billing_address_postalcode" id="billing_address_postalcode" size="30" maxlength='150' value='{$fields.billing_address_postalcode.value}' tabindex="0">
+<input type="text" name="billing_address_postalcode" id="billing_address_postalcode" size="30" maxlength='150' value='{$fields.billing_address_postalcode.value}'  >
 </td>
 </tr>
 <tr>
 <td id="billing_address_country_label" width='%' scope='row' >
-<label for="billing_address_country">{sugar_translate label='LBL_COUNTRY' module=''}:</label>
+<label for='billing_address_country'>{sugar_translate label='LBL_COUNTRY' module=''}:</label>
 {if $fields.billing_address_country.required || false}
 <span class="required">{$APP.LBL_REQUIRED_SYMBOL}</span>
 {/if}
 </td>
 <td>
-<input type="text" name="billing_address_country" id="billing_address_country" size="30" maxlength='150' value='{$fields.billing_address_country.value}' tabindex="0">
+<input type="text" name="billing_address_country" id="billing_address_country" size="30" maxlength='150' value='{$fields.billing_address_country.value}'  >
 </td>
 </tr>
 <tr>
@@ -214,7 +214,7 @@ title='' tabindex='0'  >
 </table>
 </fieldset>
 <script type="text/javascript">
-    SUGAR.util.doWhen("typeof(SUGAR.AddressField) != 'undefined'", function(){ldelim}
+   SUGAR.util.doWhen("typeof(SUGAR.AddressField) != 'undefined'", function(){ldelim}
 		billing_address = new SUGAR.AddressField("billing_checkbox",'', 'billing');
 	{rdelim});
 </script>
@@ -229,57 +229,57 @@ title='' tabindex='0'  >
 <table border="0" cellspacing="1" cellpadding="0" class="edit" width="100%">
 <tr>
 <td valign="top" id="shipping_address_street_label" width='25%' scope='row' >
-<label for="shipping_address_street">{sugar_translate label='LBL_SHIPPING_STREET' module=''}:</label>
+<label for='shipping_address_street'>{sugar_translate label='LBL_STREET' module=''}:</label>
 {if $fields.shipping_address_street.required || false}
 <span class="required">{$APP.LBL_REQUIRED_SYMBOL}</span>
 {/if}
 </td>
 <td width="*">
-<textarea id="shipping_address_street" name="shipping_address_street" maxlength="150" rows="2" cols="30" tabindex="0">{$fields.shipping_address_street.value}</textarea>
+<textarea id="shipping_address_street" name="shipping_address_street" maxlength="150" rows="2" cols="30"    >{$fields.shipping_address_street.value}</textarea>
 </td>
 </tr>
 <tr>
 <td id="shipping_address_city_label" width='%' scope='row' >
-<label for="shipping_address_city">{sugar_translate label='LBL_CITY' module=''}:
+<label for='shipping_address_city'>{sugar_translate label='LBL_CITY' module=''}:</label>
 {if $fields.shipping_address_city.required || false}
 <span class="required">{$APP.LBL_REQUIRED_SYMBOL}</span>
 {/if}
 </td>
 <td>
-<input type="text" name="shipping_address_city" id="shipping_address_city" size="30" maxlength='150' value='{$fields.shipping_address_city.value}' tabindex="0">
+<input type="text" name="shipping_address_city" id="shipping_address_city" size="30" maxlength='150' value='{$fields.shipping_address_city.value}'  >
 </td>
 </tr>
 <tr>
 <td id="shipping_address_state_label" width='%' scope='row' >
-<label for="shipping_address_state">{sugar_translate label='LBL_STATE' module=''}:</label>
+<label for='shipping_address_state'>{sugar_translate label='LBL_STATE' module=''}:</label>
 {if $fields.shipping_address_state.required || false}
 <span class="required">{$APP.LBL_REQUIRED_SYMBOL}</span>
 {/if}
 </td>
 <td>
-<input type="text" name="shipping_address_state" id="shipping_address_state" size="30" maxlength='150' value='{$fields.shipping_address_state.value}' tabindex="0">
+<input type="text" name="shipping_address_state" id="shipping_address_state" size="30" maxlength='150' value='{$fields.shipping_address_state.value}'  >
 </td>
 </tr>
 <tr>
 <td id="shipping_address_postalcode_label" width='%' scope='row' >
-<label for="shipping_address_postalcode">{sugar_translate label='LBL_POSTAL_CODE' module=''}:</label>
+<label for='shipping_address_postalcode'>{sugar_translate label='LBL_POSTAL_CODE' module=''}:</label>
 {if $fields.shipping_address_postalcode.required || false}
 <span class="required">{$APP.LBL_REQUIRED_SYMBOL}</span>
 {/if}
 </td>
 <td>
-<input type="text" name="shipping_address_postalcode" id="shipping_address_postalcode" size="30" maxlength='150' value='{$fields.shipping_address_postalcode.value}' tabindex="0">
+<input type="text" name="shipping_address_postalcode" id="shipping_address_postalcode" size="30" maxlength='150' value='{$fields.shipping_address_postalcode.value}'  >
 </td>
 </tr>
 <tr>
 <td id="shipping_address_country_label" width='%' scope='row' >
-<label for="shipping_address_country">{sugar_translate label='LBL_COUNTRY' module=''}:</label>
+<label for='shipping_address_country'>{sugar_translate label='LBL_COUNTRY' module=''}:</label>
 {if $fields.shipping_address_country.required || false}
 <span class="required">{$APP.LBL_REQUIRED_SYMBOL}</span>
 {/if}
 </td>
 <td>
-<input type="text" name="shipping_address_country" id="shipping_address_country" size="30" maxlength='150' value='{$fields.shipping_address_country.value}' tabindex="0">
+<input type="text" name="shipping_address_country" id="shipping_address_country" size="30" maxlength='150' value='{$fields.shipping_address_country.value}'  >
 </td>
 </tr>
 <tr>
@@ -293,7 +293,7 @@ title='' tabindex='0'  >
 </table>
 </fieldset>
 <script type="text/javascript">
-    SUGAR.util.doWhen("typeof(SUGAR.AddressField) != 'undefined'", function(){ldelim}
+   SUGAR.util.doWhen("typeof(SUGAR.AddressField) != 'undefined'", function(){ldelim}
 		shipping_address = new SUGAR.AddressField("shipping_checkbox",'billing', 'shipping');
 	{rdelim});
 </script>

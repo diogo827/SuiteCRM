@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.11, created on 2013-12-29 19:51:07
+<?php /* Smarty version 2.6.11, created on 2013-12-30 00:27:14
          compiled from cache/modules/Accounts/DetailView.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_include', 'cache/modules/Accounts/DetailView.tpl', 33, false),array('function', 'counter', 'cache/modules/Accounts/DetailView.tpl', 38, false),array('function', 'sugar_getimagepath', 'cache/modules/Accounts/DetailView.tpl', 41, false),array('function', 'sugar_translate', 'cache/modules/Accounts/DetailView.tpl', 44, false),array('function', 'sugar_getjspath', 'cache/modules/Accounts/DetailView.tpl', 72, false),array('function', 'sugar_phone', 'cache/modules/Accounts/DetailView.tpl', 131, false),array('function', 'sugar_ajax_url', 'cache/modules/Accounts/DetailView.tpl', 483, false),array('modifier', 'strip_semicolon', 'cache/modules/Accounts/DetailView.tpl', 58, false),array('modifier', 'substr', 'cache/modules/Accounts/DetailView.tpl', 157, false),array('modifier', 'to_url', 'cache/modules/Accounts/DetailView.tpl', 159, false),array('modifier', 'escape', 'cache/modules/Accounts/DetailView.tpl', 204, false),array('modifier', 'url2html', 'cache/modules/Accounts/DetailView.tpl', 204, false),array('modifier', 'nl2br', 'cache/modules/Accounts/DetailView.tpl', 204, false),array('modifier', 'strip_tags', 'cache/modules/Accounts/DetailView.tpl', 210, false),)), $this); ?>
@@ -237,7 +237,7 @@ linked_in_popup = new LinkedIn.CompanyInsiderBox("linkedin_div", "<?php echo $th
 
 <table border='0' cellpadding='0' cellspacing='0' width='100%'>
 <tr>
-<td width='99%'>
+<td width='99%' >
 <input type="hidden" class="sugar_field" id="billing_address_street" value="<?php echo ((is_array($_tmp=((is_array($_tmp=((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['fields']['billing_address_street']['value'])) ? $this->_run_mod_handler('escape', true, $_tmp, 'htmlentitydecode') : smarty_modifier_escape($_tmp, 'htmlentitydecode')))) ? $this->_run_mod_handler('escape', true, $_tmp, 'html') : smarty_modifier_escape($_tmp, 'html')))) ? $this->_run_mod_handler('url2html', true, $_tmp) : url2html($_tmp)))) ? $this->_run_mod_handler('nl2br', true, $_tmp) : smarty_modifier_nl2br($_tmp)); ?>
 ">
 <input type="hidden" class="sugar_field" id="billing_address_city" value="<?php echo ((is_array($_tmp=((is_array($_tmp=((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['fields']['billing_address_city']['value'])) ? $this->_run_mod_handler('escape', true, $_tmp, 'htmlentitydecode') : smarty_modifier_escape($_tmp, 'htmlentitydecode')))) ? $this->_run_mod_handler('escape', true, $_tmp, 'html') : smarty_modifier_escape($_tmp, 'html')))) ? $this->_run_mod_handler('url2html', true, $_tmp) : url2html($_tmp)))) ? $this->_run_mod_handler('nl2br', true, $_tmp) : smarty_modifier_nl2br($_tmp)); ?>
@@ -278,7 +278,7 @@ linked_in_popup = new LinkedIn.CompanyInsiderBox("linkedin_div", "<?php echo $th
 
 <table border='0' cellpadding='0' cellspacing='0' width='100%'>
 <tr>
-<td width='99%'>
+<td width='99%' >
 <input type="hidden" class="sugar_field" id="shipping_address_street" value="<?php echo ((is_array($_tmp=((is_array($_tmp=((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['fields']['shipping_address_street']['value'])) ? $this->_run_mod_handler('escape', true, $_tmp, 'htmlentitydecode') : smarty_modifier_escape($_tmp, 'htmlentitydecode')))) ? $this->_run_mod_handler('escape', true, $_tmp, 'html') : smarty_modifier_escape($_tmp, 'html')))) ? $this->_run_mod_handler('url2html', true, $_tmp) : url2html($_tmp)))) ? $this->_run_mod_handler('nl2br', true, $_tmp) : smarty_modifier_nl2br($_tmp)); ?>
 ">
 <input type="hidden" class="sugar_field" id="shipping_address_city" value="<?php echo ((is_array($_tmp=((is_array($_tmp=((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['fields']['shipping_address_city']['value'])) ? $this->_run_mod_handler('escape', true, $_tmp, 'htmlentitydecode') : smarty_modifier_escape($_tmp, 'htmlentitydecode')))) ? $this->_run_mod_handler('escape', true, $_tmp, 'html') : smarty_modifier_escape($_tmp, 'html')))) ? $this->_run_mod_handler('url2html', true, $_tmp) : url2html($_tmp)))) ? $this->_run_mod_handler('nl2br', true, $_tmp) : smarty_modifier_nl2br($_tmp)); ?>

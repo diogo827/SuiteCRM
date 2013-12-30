@@ -1,6 +1,8 @@
 <?php
-// created: 2013-12-29 18:07:34
+// created: 2013-12-30 00:24:45
 $mod_strings = array (
+  'LBL_ASSIGNED_TO_ID' => 'Assigned User Id',
+  'LBL_ASSIGNED_TO_NAME' => 'User',
   'LBL_ID' => 'ID',
   'LBL_DATE_ENTERED' => 'Date Created',
   'LBL_DATE_MODIFIED' => 'Date Modified',
@@ -15,10 +17,6 @@ $mod_strings = array (
   'LBL_CREATED_USER' => 'Created by User',
   'LBL_MODIFIED_USER' => 'Modified by User',
   'LBL_LIST_NAME' => 'Name',
-  'LBL_EDIT_BUTTON' => 'Edit',
-  'LBL_REMOVE' => 'Remove',
-  'LBL_ASSIGNED_TO_ID' => 'Assigned User Id',
-  'LBL_ASSIGNED_TO_NAME' => 'User',
   'LBL_LIST_FORM_TITLE' => 'Areas List',
   'LBL_MODULE_NAME' => 'Areas',
   'LBL_MODULE_TITLE' => 'Areas',

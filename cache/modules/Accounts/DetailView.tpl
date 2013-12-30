@@ -200,7 +200,7 @@ linked_in_popup = new LinkedIn.CompanyInsiderBox("linkedin_div", "{$fields.name.
 
 <table border='0' cellpadding='0' cellspacing='0' width='100%'>
 <tr>
-<td width='99%'>
+<td width='99%' >
 <input type="hidden" class="sugar_field" id="billing_address_street" value="{$fields.billing_address_street.value|escape:'htmlentitydecode'|escape:'html'|url2html|nl2br}">
 <input type="hidden" class="sugar_field" id="billing_address_city" value="{$fields.billing_address_city.value|escape:'htmlentitydecode'|escape:'html'|url2html|nl2br}">
 <input type="hidden" class="sugar_field" id="billing_address_state" value="{$fields.billing_address_state.value|escape:'htmlentitydecode'|escape:'html'|url2html|nl2br}">
@@ -230,7 +230,7 @@ linked_in_popup = new LinkedIn.CompanyInsiderBox("linkedin_div", "{$fields.name.
 
 <table border='0' cellpadding='0' cellspacing='0' width='100%'>
 <tr>
-<td width='99%'>
+<td width='99%' >
 <input type="hidden" class="sugar_field" id="shipping_address_street" value="{$fields.shipping_address_street.value|escape:'htmlentitydecode'|escape:'html'|url2html|nl2br}">
 <input type="hidden" class="sugar_field" id="shipping_address_city" value="{$fields.shipping_address_city.value|escape:'htmlentitydecode'|escape:'html'|url2html|nl2br}">
 <input type="hidden" class="sugar_field" id="shipping_address_state" value="{$fields.shipping_address_state.value|escape:'htmlentitydecode'|escape:'html'|url2html|nl2br}">
