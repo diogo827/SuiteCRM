@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.11, created on 2013-12-29 19:50:44
+<?php /* Smarty version 2.6.11, created on 2013-12-30 00:26:45
          compiled from cache/modules/Accounts/EditView.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_include', 'cache/modules/Accounts/EditView.tpl', 44, false),array('function', 'counter', 'cache/modules/Accounts/EditView.tpl', 50, false),array('function', 'sugar_getimagepath', 'cache/modules/Accounts/EditView.tpl', 53, false),array('function', 'sugar_translate', 'cache/modules/Accounts/EditView.tpl', 56, false),array('function', 'sugar_getjspath', 'cache/modules/Accounts/EditView.tpl', 152, false),array('function', 'html_options', 'cache/modules/Accounts/EditView.tpl', 387, false),array('modifier', 'default', 'cache/modules/Accounts/EditView.tpl', 49, false),array('modifier', 'strip_semicolon', 'cache/modules/Accounts/EditView.tpl', 67, false),array('modifier', 'lookup', 'cache/modules/Accounts/EditView.tpl', 412, false),array('modifier', 'count', 'cache/modules/Accounts/EditView.tpl', 492, false),)), $this); ?>
@@ -215,7 +215,7 @@ title='' tabindex='0'  >
 <table border="0" cellspacing="1" cellpadding="0" class="edit" width="100%">
 <tr>
 <td valign="top" id="billing_address_street_label" width='25%' scope='row' >
-<label for="billing_address_street"><?php echo smarty_function_sugar_translate(array('label' => 'LBL_BILLING_STREET','module' => ''), $this);?>
+<label for='billing_address_street'><?php echo smarty_function_sugar_translate(array('label' => 'LBL_STREET','module' => ''), $this);?>
 :</label>
 <?php if ($this->_tpl_vars['fields']['billing_address_street']['required'] || false): ?>
 <span class="required"><?php echo $this->_tpl_vars['APP']['LBL_REQUIRED_SYMBOL']; ?>
@@ -223,14 +223,14 @@ title='' tabindex='0'  >
 <?php endif; ?>
 </td>
 <td width="*">
-<textarea id="billing_address_street" name="billing_address_street" maxlength="150" rows="2" cols="30" tabindex="0"><?php echo $this->_tpl_vars['fields']['billing_address_street']['value']; ?>
+<textarea id="billing_address_street" name="billing_address_street" maxlength="150" rows="2" cols="30"    ><?php echo $this->_tpl_vars['fields']['billing_address_street']['value']; ?>
 </textarea>
 </td>
 </tr>
 <tr>
 <td id="billing_address_city_label" width='%' scope='row' >
-<label for="billing_address_city"><?php echo smarty_function_sugar_translate(array('label' => 'LBL_CITY','module' => ''), $this);?>
-:
+<label for='billing_address_city'><?php echo smarty_function_sugar_translate(array('label' => 'LBL_CITY','module' => ''), $this);?>
+:</label>
 <?php if ($this->_tpl_vars['fields']['billing_address_city']['required'] || false): ?>
 <span class="required"><?php echo $this->_tpl_vars['APP']['LBL_REQUIRED_SYMBOL']; ?>
 </span>
@@ -238,12 +238,12 @@ title='' tabindex='0'  >
 </td>
 <td>
 <input type="text" name="billing_address_city" id="billing_address_city" size="30" maxlength='150' value='<?php echo $this->_tpl_vars['fields']['billing_address_city']['value']; ?>
-' tabindex="0">
+'  >
 </td>
 </tr>
 <tr>
 <td id="billing_address_state_label" width='%' scope='row' >
-<label for="billing_address_state"><?php echo smarty_function_sugar_translate(array('label' => 'LBL_STATE','module' => ''), $this);?>
+<label for='billing_address_state'><?php echo smarty_function_sugar_translate(array('label' => 'LBL_STATE','module' => ''), $this);?>
 :</label>
 <?php if ($this->_tpl_vars['fields']['billing_address_state']['required'] || false): ?>
 <span class="required"><?php echo $this->_tpl_vars['APP']['LBL_REQUIRED_SYMBOL']; ?>
@@ -252,12 +252,12 @@ title='' tabindex='0'  >
 </td>
 <td>
 <input type="text" name="billing_address_state" id="billing_address_state" size="30" maxlength='150' value='<?php echo $this->_tpl_vars['fields']['billing_address_state']['value']; ?>
-' tabindex="0">
+'  >
 </td>
 </tr>
 <tr>
 <td id="billing_address_postalcode_label" width='%' scope='row' >
-<label for="billing_address_postalcode"><?php echo smarty_function_sugar_translate(array('label' => 'LBL_POSTAL_CODE','module' => ''), $this);?>
+<label for='billing_address_postalcode'><?php echo smarty_function_sugar_translate(array('label' => 'LBL_POSTAL_CODE','module' => ''), $this);?>
 :</label>
 <?php if ($this->_tpl_vars['fields']['billing_address_postalcode']['required'] || false): ?>
 <span class="required"><?php echo $this->_tpl_vars['APP']['LBL_REQUIRED_SYMBOL']; ?>
@@ -266,12 +266,12 @@ title='' tabindex='0'  >
 </td>
 <td>
 <input type="text" name="billing_address_postalcode" id="billing_address_postalcode" size="30" maxlength='150' value='<?php echo $this->_tpl_vars['fields']['billing_address_postalcode']['value']; ?>
-' tabindex="0">
+'  >
 </td>
 </tr>
 <tr>
 <td id="billing_address_country_label" width='%' scope='row' >
-<label for="billing_address_country"><?php echo smarty_function_sugar_translate(array('label' => 'LBL_COUNTRY','module' => ''), $this);?>
+<label for='billing_address_country'><?php echo smarty_function_sugar_translate(array('label' => 'LBL_COUNTRY','module' => ''), $this);?>
 :</label>
 <?php if ($this->_tpl_vars['fields']['billing_address_country']['required'] || false): ?>
 <span class="required"><?php echo $this->_tpl_vars['APP']['LBL_REQUIRED_SYMBOL']; ?>
@@ -280,7 +280,7 @@ title='' tabindex='0'  >
 </td>
 <td>
 <input type="text" name="billing_address_country" id="billing_address_country" size="30" maxlength='150' value='<?php echo $this->_tpl_vars['fields']['billing_address_country']['value']; ?>
-' tabindex="0">
+'  >
 </td>
 </tr>
 <tr>
@@ -289,7 +289,7 @@ title='' tabindex='0'  >
 </table>
 </fieldset>
 <script type="text/javascript">
-    SUGAR.util.doWhen("typeof(SUGAR.AddressField) != 'undefined'", function(){
+   SUGAR.util.doWhen("typeof(SUGAR.AddressField) != 'undefined'", function(){
 		billing_address = new SUGAR.AddressField("billing_checkbox",'', 'billing');
 	});
 </script>
@@ -308,7 +308,7 @@ title='' tabindex='0'  >
 <table border="0" cellspacing="1" cellpadding="0" class="edit" width="100%">
 <tr>
 <td valign="top" id="shipping_address_street_label" width='25%' scope='row' >
-<label for="shipping_address_street"><?php echo smarty_function_sugar_translate(array('label' => 'LBL_SHIPPING_STREET','module' => ''), $this);?>
+<label for='shipping_address_street'><?php echo smarty_function_sugar_translate(array('label' => 'LBL_STREET','module' => ''), $this);?>
 :</label>
 <?php if ($this->_tpl_vars['fields']['shipping_address_street']['required'] || false): ?>
 <span class="required"><?php echo $this->_tpl_vars['APP']['LBL_REQUIRED_SYMBOL']; ?>
@@ -316,14 +316,14 @@ title='' tabindex='0'  >
 <?php endif; ?>
 </td>
 <td width="*">
-<textarea id="shipping_address_street" name="shipping_address_street" maxlength="150" rows="2" cols="30" tabindex="0"><?php echo $this->_tpl_vars['fields']['shipping_address_street']['value']; ?>
+<textarea id="shipping_address_street" name="shipping_address_street" maxlength="150" rows="2" cols="30"    ><?php echo $this->_tpl_vars['fields']['shipping_address_street']['value']; ?>
 </textarea>
 </td>
 </tr>
 <tr>
 <td id="shipping_address_city_label" width='%' scope='row' >
-<label for="shipping_address_city"><?php echo smarty_function_sugar_translate(array('label' => 'LBL_CITY','module' => ''), $this);?>
-:
+<label for='shipping_address_city'><?php echo smarty_function_sugar_translate(array('label' => 'LBL_CITY','module' => ''), $this);?>
+:</label>
 <?php if ($this->_tpl_vars['fields']['shipping_address_city']['required'] || false): ?>
 <span class="required"><?php echo $this->_tpl_vars['APP']['LBL_REQUIRED_SYMBOL']; ?>
 </span>
@@ -331,12 +331,12 @@ title='' tabindex='0'  >
 </td>
 <td>
 <input type="text" name="shipping_address_city" id="shipping_address_city" size="30" maxlength='150' value='<?php echo $this->_tpl_vars['fields']['shipping_address_city']['value']; ?>
-' tabindex="0">
+'  >
 </td>
 </tr>
 <tr>
 <td id="shipping_address_state_label" width='%' scope='row' >
-<label for="shipping_address_state"><?php echo smarty_function_sugar_translate(array('label' => 'LBL_STATE','module' => ''), $this);?>
+<label for='shipping_address_state'><?php echo smarty_function_sugar_translate(array('label' => 'LBL_STATE','module' => ''), $this);?>
 :</label>
 <?php if ($this->_tpl_vars['fields']['shipping_address_state']['required'] || false): ?>
 <span class="required"><?php echo $this->_tpl_vars['APP']['LBL_REQUIRED_SYMBOL']; ?>
@@ -345,12 +345,12 @@ title='' tabindex='0'  >
 </td>
 <td>
 <input type="text" name="shipping_address_state" id="shipping_address_state" size="30" maxlength='150' value='<?php echo $this->_tpl_vars['fields']['shipping_address_state']['value']; ?>
-' tabindex="0">
+'  >
 </td>
 </tr>
 <tr>
 <td id="shipping_address_postalcode_label" width='%' scope='row' >
-<label for="shipping_address_postalcode"><?php echo smarty_function_sugar_translate(array('label' => 'LBL_POSTAL_CODE','module' => ''), $this);?>
+<label for='shipping_address_postalcode'><?php echo smarty_function_sugar_translate(array('label' => 'LBL_POSTAL_CODE','module' => ''), $this);?>
 :</label>
 <?php if ($this->_tpl_vars['fields']['shipping_address_postalcode']['required'] || false): ?>
 <span class="required"><?php echo $this->_tpl_vars['APP']['LBL_REQUIRED_SYMBOL']; ?>
@@ -359,12 +359,12 @@ title='' tabindex='0'  >
 </td>
 <td>
 <input type="text" name="shipping_address_postalcode" id="shipping_address_postalcode" size="30" maxlength='150' value='<?php echo $this->_tpl_vars['fields']['shipping_address_postalcode']['value']; ?>
-' tabindex="0">
+'  >
 </td>
 </tr>
 <tr>
 <td id="shipping_address_country_label" width='%' scope='row' >
-<label for="shipping_address_country"><?php echo smarty_function_sugar_translate(array('label' => 'LBL_COUNTRY','module' => ''), $this);?>
+<label for='shipping_address_country'><?php echo smarty_function_sugar_translate(array('label' => 'LBL_COUNTRY','module' => ''), $this);?>
 :</label>
 <?php if ($this->_tpl_vars['fields']['shipping_address_country']['required'] || false): ?>
 <span class="required"><?php echo $this->_tpl_vars['APP']['LBL_REQUIRED_SYMBOL']; ?>
@@ -373,7 +373,7 @@ title='' tabindex='0'  >
 </td>
 <td>
 <input type="text" name="shipping_address_country" id="shipping_address_country" size="30" maxlength='150' value='<?php echo $this->_tpl_vars['fields']['shipping_address_country']['value']; ?>
-' tabindex="0">
+'  >
 </td>
 </tr>
 <tr>
@@ -388,7 +388,7 @@ title='' tabindex='0'  >
 </table>
 </fieldset>
 <script type="text/javascript">
-    SUGAR.util.doWhen("typeof(SUGAR.AddressField) != 'undefined'", function(){
+   SUGAR.util.doWhen("typeof(SUGAR.AddressField) != 'undefined'", function(){
 		shipping_address = new SUGAR.AddressField("shipping_checkbox",'billing', 'shipping');
 	});
 </script>

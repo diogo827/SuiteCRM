@@ -1,540 +1,8 @@
 <?php 
  $relationships = array (
-  'leads_modified_user' => 
-  array (
-    'id' => '217344c2-a778-ed9b-390c-52c07cee012b',
-    'relationship_name' => 'leads_modified_user',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Leads',
-    'rhs_table' => 'leads',
-    'rhs_key' => 'modified_user_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'leads_created_by' => 
-  array (
-    'id' => '31077751-7ebd-cea6-9cf7-52c07c49286d',
-    'relationship_name' => 'leads_created_by',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Leads',
-    'rhs_table' => 'leads',
-    'rhs_key' => 'created_by',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'leads_assigned_user' => 
-  array (
-    'id' => '31d2f8cf-774e-a204-9a43-52c07ce6efe6',
-    'relationship_name' => 'leads_assigned_user',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Leads',
-    'rhs_table' => 'leads',
-    'rhs_key' => 'assigned_user_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'leads_email_addresses' => 
-  array (
-    'id' => '32907858-b417-5528-fc2d-52c07c3d6860',
-    'relationship_name' => 'leads_email_addresses',
-    'lhs_module' => 'Leads',
-    'lhs_table' => 'leads',
-    'lhs_key' => 'id',
-    'rhs_module' => 'EmailAddresses',
-    'rhs_table' => 'email_addresses',
-    'rhs_key' => 'id',
-    'join_table' => 'email_addr_bean_rel',
-    'join_key_lhs' => 'bean_id',
-    'join_key_rhs' => 'email_address_id',
-    'relationship_type' => 'many-to-many',
-    'relationship_role_column' => 'bean_module',
-    'relationship_role_column_value' => 'Leads',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'leads_email_addresses_primary' => 
-  array (
-    'id' => '447758d0-c44f-31f5-5950-52c07c65e4e5',
-    'relationship_name' => 'leads_email_addresses_primary',
-    'lhs_module' => 'Leads',
-    'lhs_table' => 'leads',
-    'lhs_key' => 'id',
-    'rhs_module' => 'EmailAddresses',
-    'rhs_table' => 'email_addresses',
-    'rhs_key' => 'id',
-    'join_table' => 'email_addr_bean_rel',
-    'join_key_lhs' => 'bean_id',
-    'join_key_rhs' => 'email_address_id',
-    'relationship_type' => 'many-to-many',
-    'relationship_role_column' => 'primary_address',
-    'relationship_role_column_value' => '1',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'lead_direct_reports' => 
-  array (
-    'id' => '479e4db1-ed06-15ac-c893-52c07ca9a080',
-    'relationship_name' => 'lead_direct_reports',
-    'lhs_module' => 'Leads',
-    'lhs_table' => 'leads',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Leads',
-    'rhs_table' => 'leads',
-    'rhs_key' => 'reports_to_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'lead_tasks' => 
-  array (
-    'id' => '47c8a94f-a018-82e8-bb17-52c07c9b468e',
-    'relationship_name' => 'lead_tasks',
-    'lhs_module' => 'Leads',
-    'lhs_table' => 'leads',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Tasks',
-    'rhs_table' => 'tasks',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Leads',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'lead_notes' => 
-  array (
-    'id' => '47eeaeb0-0ace-5226-d8b4-52c07c2d0dfa',
-    'relationship_name' => 'lead_notes',
-    'lhs_module' => 'Leads',
-    'lhs_table' => 'leads',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Notes',
-    'rhs_table' => 'notes',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Leads',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'lead_meetings' => 
-  array (
-    'id' => '4813f89a-3ac8-c40e-f651-52c07c361110',
-    'relationship_name' => 'lead_meetings',
-    'lhs_module' => 'Leads',
-    'lhs_table' => 'leads',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Meetings',
-    'rhs_table' => 'meetings',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Leads',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'lead_calls' => 
-  array (
-    'id' => '483616ce-e744-31e7-84b9-52c07cf59282',
-    'relationship_name' => 'lead_calls',
-    'lhs_module' => 'Leads',
-    'lhs_table' => 'leads',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Calls',
-    'rhs_table' => 'calls',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Leads',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'lead_emails' => 
-  array (
-    'id' => '4861ae70-8d32-a6c0-7c13-52c07cf376bc',
-    'relationship_name' => 'lead_emails',
-    'lhs_module' => 'Leads',
-    'lhs_table' => 'leads',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Emails',
-    'rhs_table' => 'emails',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Leads',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'lead_campaign_log' => 
-  array (
-    'id' => '48817884-fcc1-a524-4154-52c07c61cb0a',
-    'relationship_name' => 'lead_campaign_log',
-    'lhs_module' => 'Leads',
-    'lhs_table' => 'leads',
-    'lhs_key' => 'id',
-    'rhs_module' => 'CampaignLog',
-    'rhs_table' => 'campaign_log',
-    'rhs_key' => 'target_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'target_type',
-    'relationship_role_column_value' => 'Leads',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'cases_modified_user' => 
-  array (
-    'id' => '493f1421-4a5a-3e70-cb17-52c07c5dea25',
-    'relationship_name' => 'cases_modified_user',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Cases',
-    'rhs_table' => 'cases',
-    'rhs_key' => 'modified_user_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'cases_created_by' => 
-  array (
-    'id' => '496af8e6-db39-4aaa-7177-52c07cae9383',
-    'relationship_name' => 'cases_created_by',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Cases',
-    'rhs_table' => 'cases',
-    'rhs_key' => 'created_by',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'cases_assigned_user' => 
-  array (
-    'id' => '499021b0-0385-45ab-10b5-52c07c637d79',
-    'relationship_name' => 'cases_assigned_user',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Cases',
-    'rhs_table' => 'cases',
-    'rhs_key' => 'assigned_user_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'case_calls' => 
-  array (
-    'id' => '49b2923b-3936-bdad-c730-52c07c780692',
-    'relationship_name' => 'case_calls',
-    'lhs_module' => 'Cases',
-    'lhs_table' => 'cases',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Calls',
-    'rhs_table' => 'calls',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Cases',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'case_tasks' => 
-  array (
-    'id' => '49e0a50c-a35c-aa26-e232-52c07c630cc2',
-    'relationship_name' => 'case_tasks',
-    'lhs_module' => 'Cases',
-    'lhs_table' => 'cases',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Tasks',
-    'rhs_table' => 'tasks',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Cases',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'case_notes' => 
-  array (
-    'id' => '4a02b204-4daa-4a40-7f38-52c07ca7882d',
-    'relationship_name' => 'case_notes',
-    'lhs_module' => 'Cases',
-    'lhs_table' => 'cases',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Notes',
-    'rhs_table' => 'notes',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Cases',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'case_meetings' => 
-  array (
-    'id' => '4a23f4cf-cd18-d15e-703e-52c07c1b1aa3',
-    'relationship_name' => 'case_meetings',
-    'lhs_module' => 'Cases',
-    'lhs_table' => 'cases',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Meetings',
-    'rhs_table' => 'meetings',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Cases',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'case_emails' => 
-  array (
-    'id' => '4a45041e-ea67-23a3-ed21-52c07c397c92',
-    'relationship_name' => 'case_emails',
-    'lhs_module' => 'Cases',
-    'lhs_table' => 'cases',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Emails',
-    'rhs_table' => 'emails',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Cases',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'bugs_modified_user' => 
-  array (
-    'id' => '4ab12c46-d1c0-9cbd-819a-52c07c9bbd46',
-    'relationship_name' => 'bugs_modified_user',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Bugs',
-    'rhs_table' => 'bugs',
-    'rhs_key' => 'modified_user_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'bugs_created_by' => 
-  array (
-    'id' => '4ae851cf-a1ca-ff82-217d-52c07cd8fa53',
-    'relationship_name' => 'bugs_created_by',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Bugs',
-    'rhs_table' => 'bugs',
-    'rhs_key' => 'created_by',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'bugs_assigned_user' => 
-  array (
-    'id' => '4b09c2cc-fa44-32da-f345-52c07c4227b5',
-    'relationship_name' => 'bugs_assigned_user',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Bugs',
-    'rhs_table' => 'bugs',
-    'rhs_key' => 'assigned_user_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'bug_tasks' => 
-  array (
-    'id' => '4b2b59a5-7fd7-716c-4940-52c07c9c1157',
-    'relationship_name' => 'bug_tasks',
-    'lhs_module' => 'Bugs',
-    'lhs_table' => 'bugs',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Tasks',
-    'rhs_table' => 'tasks',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Bugs',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'bug_meetings' => 
-  array (
-    'id' => '4b6fa351-2c87-5dda-6549-52c07c02e1b5',
-    'relationship_name' => 'bug_meetings',
-    'lhs_module' => 'Bugs',
-    'lhs_table' => 'bugs',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Meetings',
-    'rhs_table' => 'meetings',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Bugs',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'bug_calls' => 
-  array (
-    'id' => '4b9502a1-d182-f303-4830-52c07c7bb5c2',
-    'relationship_name' => 'bug_calls',
-    'lhs_module' => 'Bugs',
-    'lhs_table' => 'bugs',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Calls',
-    'rhs_table' => 'calls',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Bugs',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'bug_emails' => 
-  array (
-    'id' => '4bb7c978-5abb-f366-17d0-52c07c34ae38',
-    'relationship_name' => 'bug_emails',
-    'lhs_module' => 'Bugs',
-    'lhs_table' => 'bugs',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Emails',
-    'rhs_table' => 'emails',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Bugs',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'bug_notes' => 
-  array (
-    'id' => '4bdb3b20-5fc4-1fad-ed36-52c07c4a94a2',
-    'relationship_name' => 'bug_notes',
-    'lhs_module' => 'Bugs',
-    'lhs_table' => 'bugs',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Notes',
-    'rhs_table' => 'notes',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Bugs',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
   'bugs_release' => 
   array (
-    'id' => '4bfbff9d-7d14-9521-9cbf-52c07c1a5499',
+    'id' => '100f077a-c234-6985-434b-52c0bdf10766',
     'relationship_name' => 'bugs_release',
     'lhs_module' => 'Releases',
     'lhs_table' => 'releases',
@@ -551,978 +19,9 @@
     'reverse' => '0',
     'deleted' => '0',
   ),
-  'bugs_fixed_in_release' => 
-  array (
-    'id' => '4c1db7d2-8de4-91f0-6f54-52c07cc96b7a',
-    'relationship_name' => 'bugs_fixed_in_release',
-    'lhs_module' => 'Releases',
-    'lhs_table' => 'releases',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Bugs',
-    'rhs_table' => 'bugs',
-    'rhs_key' => 'fixed_in_release',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'user_direct_reports' => 
-  array (
-    'id' => '4c7a4f36-178f-43a4-130d-52c07c83d24b',
-    'relationship_name' => 'user_direct_reports',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Users',
-    'rhs_table' => 'users',
-    'rhs_key' => 'reports_to_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'users_email_addresses' => 
-  array (
-    'id' => '4cb1afa3-93b8-c429-5810-52c07cb78bf1',
-    'relationship_name' => 'users_email_addresses',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'EmailAddresses',
-    'rhs_table' => 'email_addresses',
-    'rhs_key' => 'id',
-    'join_table' => 'email_addr_bean_rel',
-    'join_key_lhs' => 'bean_id',
-    'join_key_rhs' => 'email_address_id',
-    'relationship_type' => 'many-to-many',
-    'relationship_role_column' => 'bean_module',
-    'relationship_role_column_value' => 'Users',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'users_email_addresses_primary' => 
-  array (
-    'id' => '4ce2180b-48f8-640d-bec2-52c07c1332c1',
-    'relationship_name' => 'users_email_addresses_primary',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'EmailAddresses',
-    'rhs_table' => 'email_addresses',
-    'rhs_key' => 'id',
-    'join_table' => 'email_addr_bean_rel',
-    'join_key_lhs' => 'bean_id',
-    'join_key_rhs' => 'email_address_id',
-    'relationship_type' => 'many-to-many',
-    'relationship_role_column' => 'primary_address',
-    'relationship_role_column_value' => '1',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'campaignlog_contact' => 
-  array (
-    'id' => '4d1f4bb6-bda8-5229-6eab-52c07c2254ba',
-    'relationship_name' => 'campaignlog_contact',
-    'lhs_module' => 'CampaignLog',
-    'lhs_table' => 'campaign_log',
-    'lhs_key' => 'related_id',
-    'rhs_module' => 'Contacts',
-    'rhs_table' => 'contacts',
-    'rhs_key' => 'id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'campaignlog_lead' => 
-  array (
-    'id' => '4d46f911-dcc5-dfd4-57ea-52c07c6197f7',
-    'relationship_name' => 'campaignlog_lead',
-    'lhs_module' => 'CampaignLog',
-    'lhs_table' => 'campaign_log',
-    'lhs_key' => 'related_id',
-    'rhs_module' => 'Leads',
-    'rhs_table' => 'leads',
-    'rhs_key' => 'id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'campaignlog_created_opportunities' => 
-  array (
-    'id' => '4d690313-20ac-cde3-333d-52c07cf166f2',
-    'relationship_name' => 'campaignlog_created_opportunities',
-    'lhs_module' => 'CampaignLog',
-    'lhs_table' => 'campaign_log',
-    'lhs_key' => 'related_id',
-    'rhs_module' => 'Opportunities',
-    'rhs_table' => 'opportunities',
-    'rhs_key' => 'id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'campaignlog_targeted_users' => 
-  array (
-    'id' => '4d8a75dc-8569-694c-15e7-52c07caa2007',
-    'relationship_name' => 'campaignlog_targeted_users',
-    'lhs_module' => 'CampaignLog',
-    'lhs_table' => 'campaign_log',
-    'lhs_key' => 'target_id',
-    'rhs_module' => 'Users',
-    'rhs_table' => 'users',
-    'rhs_key' => 'id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'campaignlog_sent_emails' => 
-  array (
-    'id' => '4dac51f3-0f73-a277-97bc-52c07c7c8d35',
-    'relationship_name' => 'campaignlog_sent_emails',
-    'lhs_module' => 'CampaignLog',
-    'lhs_table' => 'campaign_log',
-    'lhs_key' => 'related_id',
-    'rhs_module' => 'Emails',
-    'rhs_table' => 'emails',
-    'rhs_key' => 'id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'projects_notes' => 
-  array (
-    'id' => '4e00785f-a0c2-77f3-ce14-52c07c356c3d',
-    'relationship_name' => 'projects_notes',
-    'lhs_module' => 'Project',
-    'lhs_table' => 'project',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Notes',
-    'rhs_table' => 'notes',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Project',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'projects_tasks' => 
-  array (
-    'id' => '4e2b0673-f6b1-87a5-4663-52c07c8829a7',
-    'relationship_name' => 'projects_tasks',
-    'lhs_module' => 'Project',
-    'lhs_table' => 'project',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Tasks',
-    'rhs_table' => 'tasks',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Project',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'projects_meetings' => 
-  array (
-    'id' => '4e6912e9-f86b-6b0a-4e0f-52c07ce22735',
-    'relationship_name' => 'projects_meetings',
-    'lhs_module' => 'Project',
-    'lhs_table' => 'project',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Meetings',
-    'rhs_table' => 'meetings',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Project',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'projects_calls' => 
-  array (
-    'id' => '4e90be71-0209-716c-07bc-52c07cc191b6',
-    'relationship_name' => 'projects_calls',
-    'lhs_module' => 'Project',
-    'lhs_table' => 'project',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Calls',
-    'rhs_table' => 'calls',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Project',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'projects_emails' => 
-  array (
-    'id' => '4eb344a6-d275-fb9b-b50e-52c07ce911c8',
-    'relationship_name' => 'projects_emails',
-    'lhs_module' => 'Project',
-    'lhs_table' => 'project',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Emails',
-    'rhs_table' => 'emails',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Project',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'projects_project_tasks' => 
-  array (
-    'id' => '4edfd72f-4d40-b895-db7a-52c07c3da08f',
-    'relationship_name' => 'projects_project_tasks',
-    'lhs_module' => 'Project',
-    'lhs_table' => 'project',
-    'lhs_key' => 'id',
-    'rhs_module' => 'ProjectTask',
-    'rhs_table' => 'project_task',
-    'rhs_key' => 'project_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'projects_assigned_user' => 
-  array (
-    'id' => '4f206f7d-54a8-a5c7-341a-52c07c388e85',
-    'relationship_name' => 'projects_assigned_user',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Project',
-    'rhs_table' => 'project',
-    'rhs_key' => 'assigned_user_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'projects_modified_user' => 
-  array (
-    'id' => '4f4664d3-7e75-7f3b-7d81-52c07c857a2a',
-    'relationship_name' => 'projects_modified_user',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Project',
-    'rhs_table' => 'project',
-    'rhs_key' => 'modified_user_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'projects_created_by' => 
-  array (
-    'id' => '4f69aa55-3fa9-579c-96f2-52c07cc24f23',
-    'relationship_name' => 'projects_created_by',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Project',
-    'rhs_table' => 'project',
-    'rhs_key' => 'created_by',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'project_tasks_notes' => 
-  array (
-    'id' => '4fc596b8-a11c-2e36-3638-52c07c674c92',
-    'relationship_name' => 'project_tasks_notes',
-    'lhs_module' => 'ProjectTask',
-    'lhs_table' => 'project_task',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Notes',
-    'rhs_table' => 'notes',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'ProjectTask',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'project_tasks_tasks' => 
-  array (
-    'id' => '4ff212c6-689a-35c4-55e0-52c07c3dc290',
-    'relationship_name' => 'project_tasks_tasks',
-    'lhs_module' => 'ProjectTask',
-    'lhs_table' => 'project_task',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Tasks',
-    'rhs_table' => 'tasks',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'ProjectTask',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'project_tasks_meetings' => 
-  array (
-    'id' => '501bae6c-a7c8-84b1-bc00-52c07c0d63f3',
-    'relationship_name' => 'project_tasks_meetings',
-    'lhs_module' => 'ProjectTask',
-    'lhs_table' => 'project_task',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Meetings',
-    'rhs_table' => 'meetings',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'ProjectTask',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'project_tasks_calls' => 
-  array (
-    'id' => '503f2800-975d-0dee-47b8-52c07ca4a03d',
-    'relationship_name' => 'project_tasks_calls',
-    'lhs_module' => 'ProjectTask',
-    'lhs_table' => 'project_task',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Calls',
-    'rhs_table' => 'calls',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'ProjectTask',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'project_tasks_emails' => 
-  array (
-    'id' => '50665290-5439-66a7-609f-52c07c4f3206',
-    'relationship_name' => 'project_tasks_emails',
-    'lhs_module' => 'ProjectTask',
-    'lhs_table' => 'project_task',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Emails',
-    'rhs_table' => 'emails',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'ProjectTask',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'project_tasks_assigned_user' => 
-  array (
-    'id' => '508dadd1-7a7e-79c0-a03d-52c07c11a87c',
-    'relationship_name' => 'project_tasks_assigned_user',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'ProjectTask',
-    'rhs_table' => 'project_task',
-    'rhs_key' => 'assigned_user_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'project_tasks_modified_user' => 
-  array (
-    'id' => '50bbb4a0-3d32-86af-ddc8-52c07c04a76d',
-    'relationship_name' => 'project_tasks_modified_user',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'ProjectTask',
-    'rhs_table' => 'project_task',
-    'rhs_key' => 'modified_user_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'project_tasks_created_by' => 
-  array (
-    'id' => '50e0b648-9f6c-8a9c-0f38-52c07c24ea24',
-    'relationship_name' => 'project_tasks_created_by',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'ProjectTask',
-    'rhs_table' => 'project_task',
-    'rhs_key' => 'created_by',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'campaigns_modified_user' => 
-  array (
-    'id' => '51599ffa-0992-0d92-534e-52c07c3d9df2',
-    'relationship_name' => 'campaigns_modified_user',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Campaigns',
-    'rhs_table' => 'campaigns',
-    'rhs_key' => 'modified_user_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'campaigns_created_by' => 
-  array (
-    'id' => '51850797-6812-68f6-1443-52c07c6ed2a0',
-    'relationship_name' => 'campaigns_created_by',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Campaigns',
-    'rhs_table' => 'campaigns',
-    'rhs_key' => 'created_by',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'campaigns_assigned_user' => 
-  array (
-    'id' => '51ac66e7-d549-bbed-e9e0-52c07c1c511a',
-    'relationship_name' => 'campaigns_assigned_user',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Campaigns',
-    'rhs_table' => 'campaigns',
-    'rhs_key' => 'assigned_user_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'campaign_accounts' => 
-  array (
-    'id' => '51d48666-bae0-732b-7e40-52c07c80948d',
-    'relationship_name' => 'campaign_accounts',
-    'lhs_module' => 'Campaigns',
-    'lhs_table' => 'campaigns',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Accounts',
-    'rhs_table' => 'accounts',
-    'rhs_key' => 'campaign_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'campaign_contacts' => 
-  array (
-    'id' => '520d7a48-bfcf-c725-a40f-52c07cd94040',
-    'relationship_name' => 'campaign_contacts',
-    'lhs_module' => 'Campaigns',
-    'lhs_table' => 'campaigns',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Contacts',
-    'rhs_table' => 'contacts',
-    'rhs_key' => 'campaign_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'campaign_leads' => 
-  array (
-    'id' => '523a669b-863a-a2d7-cb41-52c07cd50b27',
-    'relationship_name' => 'campaign_leads',
-    'lhs_module' => 'Campaigns',
-    'lhs_table' => 'campaigns',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Leads',
-    'rhs_table' => 'leads',
-    'rhs_key' => 'campaign_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'campaign_prospects' => 
-  array (
-    'id' => '5614558e-8ad0-2a37-ed74-52c07cda8917',
-    'relationship_name' => 'campaign_prospects',
-    'lhs_module' => 'Campaigns',
-    'lhs_table' => 'campaigns',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Prospects',
-    'rhs_table' => 'prospects',
-    'rhs_key' => 'campaign_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'campaign_opportunities' => 
-  array (
-    'id' => '5a9dd20d-f140-886b-223a-52c07ca535d9',
-    'relationship_name' => 'campaign_opportunities',
-    'lhs_module' => 'Campaigns',
-    'lhs_table' => 'campaigns',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Opportunities',
-    'rhs_table' => 'opportunities',
-    'rhs_key' => 'campaign_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'campaign_email_marketing' => 
-  array (
-    'id' => '5ac4ec13-26cc-bc30-42ae-52c07c95c68f',
-    'relationship_name' => 'campaign_email_marketing',
-    'lhs_module' => 'Campaigns',
-    'lhs_table' => 'campaigns',
-    'lhs_key' => 'id',
-    'rhs_module' => 'EmailMarketing',
-    'rhs_table' => 'email_marketing',
-    'rhs_key' => 'campaign_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'campaign_emailman' => 
-  array (
-    'id' => '5af3c549-d833-d558-0b7d-52c07c0d3565',
-    'relationship_name' => 'campaign_emailman',
-    'lhs_module' => 'Campaigns',
-    'lhs_table' => 'campaigns',
-    'lhs_key' => 'id',
-    'rhs_module' => 'EmailMan',
-    'rhs_table' => 'emailman',
-    'rhs_key' => 'campaign_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'campaign_campaignlog' => 
-  array (
-    'id' => '5b1559e2-dfaa-dc5e-e6ba-52c07c362e5b',
-    'relationship_name' => 'campaign_campaignlog',
-    'lhs_module' => 'Campaigns',
-    'lhs_table' => 'campaigns',
-    'lhs_key' => 'id',
-    'rhs_module' => 'CampaignLog',
-    'rhs_table' => 'campaign_log',
-    'rhs_key' => 'campaign_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'campaign_assigned_user' => 
-  array (
-    'id' => '5b37dd4c-20d7-d780-0027-52c07ccc0299',
-    'relationship_name' => 'campaign_assigned_user',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Campaigns',
-    'rhs_table' => 'campaigns',
-    'rhs_key' => 'assigned_user_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'campaign_modified_user' => 
-  array (
-    'id' => '5b5a5a27-c336-0e35-6d1b-52c07c72adab',
-    'relationship_name' => 'campaign_modified_user',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Campaigns',
-    'rhs_table' => 'campaigns',
-    'rhs_key' => 'modified_user_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'prospectlists_assigned_user' => 
-  array (
-    'id' => '5bab7a56-16ee-38c3-139b-52c07c6e0bcc',
-    'relationship_name' => 'prospectlists_assigned_user',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'prospectlists',
-    'rhs_table' => 'prospect_lists',
-    'rhs_key' => 'assigned_user_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'prospects_modified_user' => 
-  array (
-    'id' => '5c37d4f1-b611-acbd-5bbc-52c07c0a7411',
-    'relationship_name' => 'prospects_modified_user',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Prospects',
-    'rhs_table' => 'prospects',
-    'rhs_key' => 'modified_user_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'prospects_created_by' => 
-  array (
-    'id' => '5c634a09-f181-a4a2-3f48-52c07c6f9578',
-    'relationship_name' => 'prospects_created_by',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Prospects',
-    'rhs_table' => 'prospects',
-    'rhs_key' => 'created_by',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'prospects_assigned_user' => 
-  array (
-    'id' => '5c8bd80f-3ea1-8c81-196c-52c07c6082ab',
-    'relationship_name' => 'prospects_assigned_user',
-    'lhs_module' => 'Users',
-    'lhs_table' => 'users',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Prospects',
-    'rhs_table' => 'prospects',
-    'rhs_key' => 'assigned_user_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => NULL,
-    'relationship_role_column_value' => NULL,
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'prospects_email_addresses' => 
-  array (
-    'id' => '5cb0b2f1-c878-be7c-3554-52c07c3570b1',
-    'relationship_name' => 'prospects_email_addresses',
-    'lhs_module' => 'Prospects',
-    'lhs_table' => 'prospects',
-    'lhs_key' => 'id',
-    'rhs_module' => 'EmailAddresses',
-    'rhs_table' => 'email_addresses',
-    'rhs_key' => 'id',
-    'join_table' => 'email_addr_bean_rel',
-    'join_key_lhs' => 'bean_id',
-    'join_key_rhs' => 'email_address_id',
-    'relationship_type' => 'many-to-many',
-    'relationship_role_column' => 'bean_module',
-    'relationship_role_column_value' => 'Prospects',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'prospects_email_addresses_primary' => 
-  array (
-    'id' => '5cd5959c-23e8-6553-edc8-52c07c00f514',
-    'relationship_name' => 'prospects_email_addresses_primary',
-    'lhs_module' => 'Prospects',
-    'lhs_table' => 'prospects',
-    'lhs_key' => 'id',
-    'rhs_module' => 'EmailAddresses',
-    'rhs_table' => 'email_addresses',
-    'rhs_key' => 'id',
-    'join_table' => 'email_addr_bean_rel',
-    'join_key_lhs' => 'bean_id',
-    'join_key_rhs' => 'email_address_id',
-    'relationship_type' => 'many-to-many',
-    'relationship_role_column' => 'primary_address',
-    'relationship_role_column_value' => '1',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'prospect_tasks' => 
-  array (
-    'id' => '5d038097-d102-36b2-4dbc-52c07c8d46ea',
-    'relationship_name' => 'prospect_tasks',
-    'lhs_module' => 'Prospects',
-    'lhs_table' => 'prospects',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Tasks',
-    'rhs_table' => 'tasks',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Prospects',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'prospect_notes' => 
-  array (
-    'id' => '5d25a075-1aae-0aa6-503e-52c07c8e9355',
-    'relationship_name' => 'prospect_notes',
-    'lhs_module' => 'Prospects',
-    'lhs_table' => 'prospects',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Notes',
-    'rhs_table' => 'notes',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Prospects',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'prospect_meetings' => 
-  array (
-    'id' => '5d489ed3-c129-81df-315d-52c07cfeeb0a',
-    'relationship_name' => 'prospect_meetings',
-    'lhs_module' => 'Prospects',
-    'lhs_table' => 'prospects',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Meetings',
-    'rhs_table' => 'meetings',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Prospects',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'prospect_calls' => 
-  array (
-    'id' => '5d6b723d-f79a-d577-7dfa-52c07c8217f1',
-    'relationship_name' => 'prospect_calls',
-    'lhs_module' => 'Prospects',
-    'lhs_table' => 'prospects',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Calls',
-    'rhs_table' => 'calls',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Prospects',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'prospect_emails' => 
-  array (
-    'id' => '5d8dce97-4ab5-7584-a9dd-52c07c28a75b',
-    'relationship_name' => 'prospect_emails',
-    'lhs_module' => 'Prospects',
-    'lhs_table' => 'prospects',
-    'lhs_key' => 'id',
-    'rhs_module' => 'Emails',
-    'rhs_table' => 'emails',
-    'rhs_key' => 'parent_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'parent_type',
-    'relationship_role_column_value' => 'Prospects',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
-  'prospect_campaign_log' => 
-  array (
-    'id' => '5db6f3ba-3e4e-8db0-68e8-52c07cf4defb',
-    'relationship_name' => 'prospect_campaign_log',
-    'lhs_module' => 'Prospects',
-    'lhs_table' => 'prospects',
-    'lhs_key' => 'id',
-    'rhs_module' => 'CampaignLog',
-    'rhs_table' => 'campaign_log',
-    'rhs_key' => 'target_id',
-    'join_table' => NULL,
-    'join_key_lhs' => NULL,
-    'join_key_rhs' => NULL,
-    'relationship_type' => 'one-to-many',
-    'relationship_role_column' => 'target_type',
-    'relationship_role_column_value' => 'Prospects',
-    'reverse' => '0',
-    'deleted' => '0',
-  ),
   'email_template_email_marketings' => 
   array (
-    'id' => '5df0613e-b6f3-ebd9-0e2d-52c07cb2e69c',
+    'id' => '10619f6b-601f-1298-2e24-52c0bd4d3305',
     'relationship_name' => 'email_template_email_marketings',
     'lhs_module' => 'EmailTemplates',
     'lhs_table' => 'email_templates',
@@ -1541,7 +40,7 @@
   ),
   'campaign_campaigntrakers' => 
   array (
-    'id' => '5e28a384-5c3d-b833-a724-52c07c126372',
+    'id' => '11145175-d296-381a-4542-52c0bd1127ac',
     'relationship_name' => 'campaign_campaigntrakers',
     'lhs_module' => 'Campaigns',
     'lhs_table' => 'campaigns',
@@ -1558,9 +57,28 @@
     'reverse' => '0',
     'deleted' => '0',
   ),
+  'bugs_fixed_in_release' => 
+  array (
+    'id' => '12ce0601-87f0-4e42-cc8a-52c0bd2276fe',
+    'relationship_name' => 'bugs_fixed_in_release',
+    'lhs_module' => 'Releases',
+    'lhs_table' => 'releases',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Bugs',
+    'rhs_table' => 'bugs',
+    'rhs_key' => 'fixed_in_release',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
   'schedulers_created_by_rel' => 
   array (
-    'id' => '5e8be70b-35ab-ce74-662e-52c07c1ffd6a',
+    'id' => '14a9fa0c-36c1-3802-343c-52c0bd673ceb',
     'relationship_name' => 'schedulers_created_by_rel',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -1579,7 +97,7 @@
   ),
   'schedulers_modified_user_id_rel' => 
   array (
-    'id' => '5eb1147f-e911-2042-5d58-52c07cbc460d',
+    'id' => '14d7d9cf-f49b-1ce1-64fe-52c0bd9023f7',
     'relationship_name' => 'schedulers_modified_user_id_rel',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -1598,7 +116,7 @@
   ),
   'schedulers_jobs_rel' => 
   array (
-    'id' => '5edf44b0-db86-97df-3306-52c07ce97bdf',
+    'id' => '15014f3c-0d0c-a6d5-6f2b-52c0bdcbb545',
     'relationship_name' => 'schedulers_jobs_rel',
     'lhs_module' => 'Schedulers',
     'lhs_table' => 'schedulers',
@@ -1617,7 +135,7 @@
   ),
   'schedulersjobs_assigned_user' => 
   array (
-    'id' => '5f2b0884-97a3-d67d-5cfd-52c07c8f78ca',
+    'id' => '1563328f-a263-ea12-49d0-52c0bd5a3b0f',
     'relationship_name' => 'schedulersjobs_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -1634,9 +152,28 @@
     'reverse' => '0',
     'deleted' => '0',
   ),
+  'bugs_assigned_user' => 
+  array (
+    'id' => '15d00146-b56b-1959-9121-52c0bd650e63',
+    'relationship_name' => 'bugs_assigned_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Bugs',
+    'rhs_table' => 'bugs',
+    'rhs_key' => 'assigned_user_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
   'contacts_modified_user' => 
   array (
-    'id' => '5fc346a2-6f87-59af-9330-52c07c72cad6',
+    'id' => '1818853a-0c59-2bff-f341-52c0bd26f83d',
     'relationship_name' => 'contacts_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -1655,7 +192,7 @@
   ),
   'contacts_created_by' => 
   array (
-    'id' => '5ff0398f-d7ef-6de6-439a-52c07cc31c11',
+    'id' => '185a55b5-0645-e785-075b-52c0bd177e33',
     'relationship_name' => 'contacts_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -1674,7 +211,7 @@
   ),
   'contacts_assigned_user' => 
   array (
-    'id' => '6018aba3-c4a8-b774-b120-52c07caee87e',
+    'id' => '189fa8d1-04f3-7b97-87e8-52c0bdae00d8',
     'relationship_name' => 'contacts_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -1693,7 +230,7 @@
   ),
   'contacts_email_addresses' => 
   array (
-    'id' => '603f2fdf-24b9-26af-51b1-52c07c75028a',
+    'id' => '18d3200e-ea1e-94d9-b6f4-52c0bdd482a3',
     'relationship_name' => 'contacts_email_addresses',
     'lhs_module' => 'Contacts',
     'lhs_table' => 'contacts',
@@ -1712,7 +249,7 @@
   ),
   'contacts_email_addresses_primary' => 
   array (
-    'id' => '6065d87a-ce14-2391-e1db-52c07c483a35',
+    'id' => '1907fcfd-ef76-2d90-bda9-52c0bda56c8f',
     'relationship_name' => 'contacts_email_addresses_primary',
     'lhs_module' => 'Contacts',
     'lhs_table' => 'contacts',
@@ -1731,7 +268,7 @@
   ),
   'contact_direct_reports' => 
   array (
-    'id' => '608ca249-63ee-fc18-dfcc-52c07c788c8e',
+    'id' => '192f1b07-9d3f-815d-a18f-52c0bd2d0502',
     'relationship_name' => 'contact_direct_reports',
     'lhs_module' => 'Contacts',
     'lhs_table' => 'contacts',
@@ -1750,7 +287,7 @@
   ),
   'contact_leads' => 
   array (
-    'id' => '60b458e9-84c8-7c39-7dca-52c07ce6699a',
+    'id' => '1958dc3e-00aa-77c5-7d92-52c0bdc34713',
     'relationship_name' => 'contact_leads',
     'lhs_module' => 'Contacts',
     'lhs_table' => 'contacts',
@@ -1769,7 +306,7 @@
   ),
   'contact_notes' => 
   array (
-    'id' => '60d903bc-ae0b-9925-d843-52c07ca9f793',
+    'id' => '1981fbc0-9284-4cb1-f847-52c0bd07e2a8',
     'relationship_name' => 'contact_notes',
     'lhs_module' => 'Contacts',
     'lhs_table' => 'contacts',
@@ -1788,7 +325,7 @@
   ),
   'contact_tasks' => 
   array (
-    'id' => '61053c84-5a92-a05e-091f-52c07c611169',
+    'id' => '19b1b72d-d434-9909-eaa8-52c0bd2b41ff',
     'relationship_name' => 'contact_tasks',
     'lhs_module' => 'Contacts',
     'lhs_table' => 'contacts',
@@ -1807,7 +344,7 @@
   ),
   'contact_tasks_parent' => 
   array (
-    'id' => '612c09b7-7644-cb23-89d7-52c07cf0fe65',
+    'id' => '19d95424-64bc-c5ac-7ead-52c0bd65ef92',
     'relationship_name' => 'contact_tasks_parent',
     'lhs_module' => 'Contacts',
     'lhs_table' => 'contacts',
@@ -1826,7 +363,7 @@
   ),
   'contact_notes_parent' => 
   array (
-    'id' => '614dbcb3-65d0-26c2-1e01-52c07c75325e',
+    'id' => '1a00b4ef-4744-d743-61ba-52c0bd55e3c0',
     'relationship_name' => 'contact_notes_parent',
     'lhs_module' => 'Contacts',
     'lhs_table' => 'contacts',
@@ -1845,7 +382,7 @@
   ),
   'contact_campaign_log' => 
   array (
-    'id' => '616f0fe3-8eb9-8a49-4dfa-52c07c63220a',
+    'id' => '1a25b590-910a-916e-3e49-52c0bdc3b4ab',
     'relationship_name' => 'contact_campaign_log',
     'lhs_module' => 'Contacts',
     'lhs_table' => 'contacts',
@@ -1864,7 +401,7 @@
   ),
   'contact_aos_quotes' => 
   array (
-    'id' => '6190576f-4732-19cb-8736-52c07cfce5dd',
+    'id' => '1a553ce6-98a7-48b3-776e-52c0bdf0f8ef',
     'relationship_name' => 'contact_aos_quotes',
     'lhs_module' => 'Contacts',
     'lhs_table' => 'contacts',
@@ -1883,7 +420,7 @@
   ),
   'contact_aos_invoices' => 
   array (
-    'id' => '61b29792-d028-281d-7cae-52c07c50bdce',
+    'id' => '1a77d4ca-61e1-cd29-0d50-52c0bd378644',
     'relationship_name' => 'contact_aos_invoices',
     'lhs_module' => 'Contacts',
     'lhs_table' => 'contacts',
@@ -1902,7 +439,7 @@
   ),
   'contact_aos_contracts' => 
   array (
-    'id' => '61eacf1c-52af-1993-2adf-52c07c77aa23',
+    'id' => '1abc34c2-20b2-cee7-0e96-52c0bd31e775',
     'relationship_name' => 'contact_aos_contracts',
     'lhs_module' => 'Contacts',
     'lhs_table' => 'contacts',
@@ -1921,7 +458,7 @@
   ),
   'contacts_aop_case_updates' => 
   array (
-    'id' => '620b9a7f-5528-e678-6013-52c07c7e74cd',
+    'id' => '1aded1ef-044a-6556-0889-52c0bd992019',
     'relationship_name' => 'contacts_aop_case_updates',
     'lhs_module' => 'Contacts',
     'lhs_table' => 'contacts',
@@ -1940,7 +477,7 @@
   ),
   'accounts_modified_user' => 
   array (
-    'id' => '629d2b41-ec61-22c2-89a7-52c07cfd9f06',
+    'id' => '1bc96aa0-e29c-1bda-3bb9-52c0bd221767',
     'relationship_name' => 'accounts_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -1957,9 +494,28 @@
     'reverse' => '0',
     'deleted' => '0',
   ),
+  'user_direct_reports' => 
+  array (
+    'id' => '1bd60aec-830e-7c85-cfca-52c0bd1f04a9',
+    'relationship_name' => 'user_direct_reports',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Users',
+    'rhs_table' => 'users',
+    'rhs_key' => 'reports_to_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
   'accounts_created_by' => 
   array (
-    'id' => '62c84d95-c71f-0328-8a1a-52c07c0c94be',
+    'id' => '1bf934b6-59d4-7c7f-138f-52c0bd63a32d',
     'relationship_name' => 'accounts_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -1978,7 +534,7 @@
   ),
   'accounts_assigned_user' => 
   array (
-    'id' => '62edaf4b-12f0-4ece-1121-52c07c2d5877',
+    'id' => '1c208e9e-bbb6-18c2-25af-52c0bdb4885f',
     'relationship_name' => 'accounts_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -1997,7 +553,7 @@
   ),
   'accounts_email_addresses' => 
   array (
-    'id' => '6311aaa8-05ab-a27f-9283-52c07c314ecf',
+    'id' => '1c45b15f-f286-6ba0-0599-52c0bd4124cf',
     'relationship_name' => 'accounts_email_addresses',
     'lhs_module' => 'Accounts',
     'lhs_table' => 'accounts',
@@ -2016,7 +572,7 @@
   ),
   'accounts_email_addresses_primary' => 
   array (
-    'id' => '635324f4-4945-5c08-6fc0-52c07c5fdfbe',
+    'id' => '1c6a297b-8200-fd6c-94d0-52c0bd8c125a',
     'relationship_name' => 'accounts_email_addresses_primary',
     'lhs_module' => 'Accounts',
     'lhs_table' => 'accounts',
@@ -2035,7 +591,7 @@
   ),
   'member_accounts' => 
   array (
-    'id' => '6375bdc5-2e53-5357-4069-52c07ca01d98',
+    'id' => '1c8ef326-ced3-a862-7760-52c0bd3d6096',
     'relationship_name' => 'member_accounts',
     'lhs_module' => 'Accounts',
     'lhs_table' => 'accounts',
@@ -2054,7 +610,7 @@
   ),
   'account_cases' => 
   array (
-    'id' => '639eece5-0a91-3a31-f64b-52c07c0f268b',
+    'id' => '1cb16e35-f0d2-4d84-dc6d-52c0bde11d07',
     'relationship_name' => 'account_cases',
     'lhs_module' => 'Accounts',
     'lhs_table' => 'accounts',
@@ -2073,7 +629,7 @@
   ),
   'account_tasks' => 
   array (
-    'id' => '63c29826-37e9-28fa-1dd5-52c07c844611',
+    'id' => '1cd3504f-6060-f113-ae6e-52c0bdcb282d',
     'relationship_name' => 'account_tasks',
     'lhs_module' => 'Accounts',
     'lhs_table' => 'accounts',
@@ -2092,7 +648,7 @@
   ),
   'account_notes' => 
   array (
-    'id' => '63e40000-b2fd-d364-5261-52c07cecf2cc',
+    'id' => '1d0625eb-f1f4-489d-c13c-52c0bdd9c84a',
     'relationship_name' => 'account_notes',
     'lhs_module' => 'Accounts',
     'lhs_table' => 'accounts',
@@ -2111,7 +667,7 @@
   ),
   'account_meetings' => 
   array (
-    'id' => '6405c51b-4834-b161-b3e8-52c07c70ce90',
+    'id' => '1d280ea0-a4fc-7f22-0c0f-52c0bdf966ab',
     'relationship_name' => 'account_meetings',
     'lhs_module' => 'Accounts',
     'lhs_table' => 'accounts',
@@ -2130,7 +686,7 @@
   ),
   'account_calls' => 
   array (
-    'id' => '6425e22c-68a0-32bd-366e-52c07ce32ae9',
+    'id' => '1d49a290-70f2-d4ca-875a-52c0bdadd81e',
     'relationship_name' => 'account_calls',
     'lhs_module' => 'Accounts',
     'lhs_table' => 'accounts',
@@ -2149,7 +705,7 @@
   ),
   'account_emails' => 
   array (
-    'id' => '64473a83-e0fd-3531-8a50-52c07cf6e47d',
+    'id' => '1d6b2a8d-df77-301e-0b64-52c0bd43c4d7',
     'relationship_name' => 'account_emails',
     'lhs_module' => 'Accounts',
     'lhs_table' => 'accounts',
@@ -2168,7 +724,7 @@
   ),
   'account_leads' => 
   array (
-    'id' => '64681985-9513-9296-fc05-52c07c17c433',
+    'id' => '1d8c7f07-cd54-7ac8-8ab3-52c0bdb88aa3',
     'relationship_name' => 'account_leads',
     'lhs_module' => 'Accounts',
     'lhs_table' => 'accounts',
@@ -2187,7 +743,7 @@
   ),
   'account_campaign_log' => 
   array (
-    'id' => '64893b46-fcf8-fa8f-65e7-52c07cca9825',
+    'id' => '1db3266b-16c0-fb1c-823d-52c0bdb271f9',
     'relationship_name' => 'account_campaign_log',
     'lhs_module' => 'Accounts',
     'lhs_table' => 'accounts',
@@ -2206,7 +762,7 @@
   ),
   'account_aos_quotes' => 
   array (
-    'id' => '64b43a44-660c-84dd-62e2-52c07c505efc',
+    'id' => '1de24df4-10aa-f46b-a5ea-52c0bdbcf848',
     'relationship_name' => 'account_aos_quotes',
     'lhs_module' => 'Accounts',
     'lhs_table' => 'accounts',
@@ -2225,7 +781,7 @@
   ),
   'account_aos_invoices' => 
   array (
-    'id' => '64d3227d-1209-3cca-b35d-52c07c62b877',
+    'id' => '1e10bbc6-d4da-5806-a635-52c0bdb8ebb2',
     'relationship_name' => 'account_aos_invoices',
     'lhs_module' => 'Accounts',
     'lhs_table' => 'accounts',
@@ -2244,7 +800,7 @@
   ),
   'account_aos_contracts' => 
   array (
-    'id' => '64f5102c-cf4a-8b35-4f89-52c07caa21c0',
+    'id' => '1e3379fc-a447-381e-36b1-52c0bd476e45',
     'relationship_name' => 'account_aos_contracts',
     'lhs_module' => 'Accounts',
     'lhs_table' => 'accounts',
@@ -2261,9 +817,28 @@
     'reverse' => '0',
     'deleted' => '0',
   ),
+  'users_email_addresses' => 
+  array (
+    'id' => '1eb00349-a167-fa91-dd6c-52c0bdaa9eb8',
+    'relationship_name' => 'users_email_addresses',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'EmailAddresses',
+    'rhs_table' => 'email_addresses',
+    'rhs_key' => 'id',
+    'join_table' => 'email_addr_bean_rel',
+    'join_key_lhs' => 'bean_id',
+    'join_key_rhs' => 'email_address_id',
+    'relationship_type' => 'many-to-many',
+    'relationship_role_column' => 'bean_module',
+    'relationship_role_column_value' => 'Users',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
   'opportunities_modified_user' => 
   array (
-    'id' => '65619a22-770c-b994-344b-52c07c7a807f',
+    'id' => '1f027f66-6a44-1afa-9b32-52c0bd5b94f8',
     'relationship_name' => 'opportunities_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -2282,7 +857,7 @@
   ),
   'opportunities_created_by' => 
   array (
-    'id' => '658d4d69-dc13-2ddb-0d14-52c07cab7eec',
+    'id' => '1f3a74bc-1768-ea70-1280-52c0bd01c0db',
     'relationship_name' => 'opportunities_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -2301,7 +876,7 @@
   ),
   'opportunities_assigned_user' => 
   array (
-    'id' => '65b3849b-2729-32f6-de0b-52c07cedc0aa',
+    'id' => '1f6083d3-c0b2-5cca-5c69-52c0bd29552b',
     'relationship_name' => 'opportunities_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -2320,7 +895,7 @@
   ),
   'opportunity_calls' => 
   array (
-    'id' => '65d7fdad-33a1-adbb-1061-52c07c81e0cc',
+    'id' => '1f872387-3c38-f1aa-9448-52c0bd71a15a',
     'relationship_name' => 'opportunity_calls',
     'lhs_module' => 'Opportunities',
     'lhs_table' => 'opportunities',
@@ -2339,7 +914,7 @@
   ),
   'opportunity_meetings' => 
   array (
-    'id' => '6601af20-63f3-88ab-bd21-52c07cede777',
+    'id' => '1fac7d33-39ac-f02a-a2e7-52c0bd7225cc',
     'relationship_name' => 'opportunity_meetings',
     'lhs_module' => 'Opportunities',
     'lhs_table' => 'opportunities',
@@ -2358,7 +933,7 @@
   ),
   'opportunity_tasks' => 
   array (
-    'id' => '6626141e-b136-06e1-8558-52c07c7a131d',
+    'id' => '1fcf6c2f-4293-8420-d9d0-52c0bddbe53e',
     'relationship_name' => 'opportunity_tasks',
     'lhs_module' => 'Opportunities',
     'lhs_table' => 'opportunities',
@@ -2377,7 +952,7 @@
   ),
   'opportunity_notes' => 
   array (
-    'id' => '66499542-6efb-2ca2-48eb-52c07cca28e6',
+    'id' => '1ff1f8d2-27e6-a718-9eb7-52c0bd1ce977',
     'relationship_name' => 'opportunity_notes',
     'lhs_module' => 'Opportunities',
     'lhs_table' => 'opportunities',
@@ -2396,7 +971,7 @@
   ),
   'opportunity_emails' => 
   array (
-    'id' => '6677c273-7831-de15-383e-52c07ca3a275',
+    'id' => '20140c94-6631-0318-5984-52c0bd44c23d',
     'relationship_name' => 'opportunity_emails',
     'lhs_module' => 'Opportunities',
     'lhs_table' => 'opportunities',
@@ -2415,7 +990,7 @@
   ),
   'opportunity_leads' => 
   array (
-    'id' => '669998bc-e8b6-5d98-0e6b-52c07ccb43ea',
+    'id' => '2035f664-c112-ed64-3e8d-52c0bdb2bbef',
     'relationship_name' => 'opportunity_leads',
     'lhs_module' => 'Opportunities',
     'lhs_table' => 'opportunities',
@@ -2434,7 +1009,7 @@
   ),
   'opportunity_currencies' => 
   array (
-    'id' => '66bafe8d-9874-54a3-eb7c-52c07ce9f588',
+    'id' => '2056fff8-a8f4-8b75-2c6a-52c0bd78444d',
     'relationship_name' => 'opportunity_currencies',
     'lhs_module' => 'Opportunities',
     'lhs_table' => 'opportunities',
@@ -2453,7 +1028,7 @@
   ),
   'opportunities_campaign' => 
   array (
-    'id' => '66ddc9df-13d5-aeb3-29a1-52c07cf433c3',
+    'id' => '2078bd2f-9ec6-fd31-b44a-52c0bd8335bd',
     'relationship_name' => 'opportunities_campaign',
     'lhs_module' => 'Campaigns',
     'lhs_table' => 'campaigns',
@@ -2472,7 +1047,7 @@
   ),
   'opportunity_aos_quotes' => 
   array (
-    'id' => '670fdd9a-d860-f9d7-8bcd-52c07cdc5402',
+    'id' => '20a2faf4-3f65-dc46-231f-52c0bd5f841f',
     'relationship_name' => 'opportunity_aos_quotes',
     'lhs_module' => 'Opportunities',
     'lhs_table' => 'opportunities',
@@ -2491,7 +1066,7 @@
   ),
   'opportunity_aos_contracts' => 
   array (
-    'id' => '67344706-c6b6-7d2d-8791-52c07ca3ba04',
+    'id' => '20c46afd-3ffb-8534-8661-52c0bd92e569',
     'relationship_name' => 'opportunity_aos_contracts',
     'lhs_module' => 'Opportunities',
     'lhs_table' => 'opportunities',
@@ -2508,9 +1083,28 @@
     'reverse' => '0',
     'deleted' => '0',
   ),
+  'users_email_addresses_primary' => 
+  array (
+    'id' => '2129070f-5143-4dde-0f7f-52c0bd4e2203',
+    'relationship_name' => 'users_email_addresses_primary',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'EmailAddresses',
+    'rhs_table' => 'email_addresses',
+    'rhs_key' => 'id',
+    'join_table' => 'email_addr_bean_rel',
+    'join_key_lhs' => 'bean_id',
+    'join_key_rhs' => 'email_address_id',
+    'relationship_type' => 'many-to-many',
+    'relationship_role_column' => 'primary_address',
+    'relationship_role_column_value' => '1',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
   'emailtemplates_assigned_user' => 
   array (
-    'id' => '677ce3d0-0ee7-295b-6aa8-52c07c261532',
+    'id' => '21f064ca-6231-d44d-b803-52c0bd165f5e',
     'relationship_name' => 'emailtemplates_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -2529,7 +1123,7 @@
   ),
   'notes_assigned_user' => 
   array (
-    'id' => '67deab5f-de58-d352-0ad6-52c07c993f0b',
+    'id' => '235e15e6-9ae7-36cf-b9a9-52c0bde13506',
     'relationship_name' => 'notes_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -2548,7 +1142,7 @@
   ),
   'notes_modified_user' => 
   array (
-    'id' => '680c40c3-e2d7-428f-6a8a-52c07c1df84a',
+    'id' => '238d1822-5dbc-4c45-1d28-52c0bdf83a00',
     'relationship_name' => 'notes_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -2567,7 +1161,7 @@
   ),
   'notes_created_by' => 
   array (
-    'id' => '6832f477-eb58-a41c-729d-52c07cae3656',
+    'id' => '23b1787a-dbfd-7f29-8744-52c0bdc48a58',
     'relationship_name' => 'notes_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -2586,7 +1180,7 @@
   ),
   'calls_modified_user' => 
   array (
-    'id' => '68a7d448-ea0e-93f3-b216-52c07cd59df9',
+    'id' => '25822b43-3823-5a23-ebbe-52c0bd2906e5',
     'relationship_name' => 'calls_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -2605,7 +1199,7 @@
   ),
   'calls_created_by' => 
   array (
-    'id' => '68e4343b-3cc6-29fa-b0ba-52c07cfb32cb',
+    'id' => '25aec700-3091-dfaf-b1d7-52c0bd6f3535',
     'relationship_name' => 'calls_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -2624,7 +1218,7 @@
   ),
   'calls_assigned_user' => 
   array (
-    'id' => '6908c249-2255-25d9-b5e1-52c07c9d28e2',
+    'id' => '25ddc53f-27a9-133e-7631-52c0bd54a37b',
     'relationship_name' => 'calls_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -2643,7 +1237,7 @@
   ),
   'calls_notes' => 
   array (
-    'id' => '692e332b-a91c-85c7-27ab-52c07cdb3e4d',
+    'id' => '260aeaf0-e5df-2152-81f8-52c0bd426f6f',
     'relationship_name' => 'calls_notes',
     'lhs_module' => 'Calls',
     'lhs_table' => 'calls',
@@ -2662,7 +1256,7 @@
   ),
   'calls_reschedule' => 
   array (
-    'id' => '695478d7-dbba-bfe9-a13b-52c07c7a73db',
+    'id' => '264237ce-1edf-7671-a408-52c0bd770912',
     'relationship_name' => 'calls_reschedule',
     'lhs_module' => 'Calls',
     'lhs_table' => 'calls',
@@ -2681,7 +1275,7 @@
   ),
   'emails_assigned_user' => 
   array (
-    'id' => '69aed08a-a8ee-acaf-c917-52c07c2603bf',
+    'id' => '26b935b7-06ea-43da-f466-52c0bdd60e1b',
     'relationship_name' => 'emails_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -2700,7 +1294,7 @@
   ),
   'emails_modified_user' => 
   array (
-    'id' => '69dcad60-25a2-8a14-acbb-52c07c425b02',
+    'id' => '26e98b95-edd7-1fea-8a6f-52c0bd78dc37',
     'relationship_name' => 'emails_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -2719,7 +1313,7 @@
   ),
   'emails_created_by' => 
   array (
-    'id' => '6a0315a9-bd99-43a5-bf3a-52c07c764573',
+    'id' => '270f4d40-d4a7-3a79-0d7f-52c0bd4e49b7',
     'relationship_name' => 'emails_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -2738,7 +1332,7 @@
   ),
   'emails_notes_rel' => 
   array (
-    'id' => '6a2822b6-4d1f-fcec-835d-52c07c4df358',
+    'id' => '273227e0-52b4-f69c-8fd1-52c0bd5a9a47',
     'relationship_name' => 'emails_notes_rel',
     'lhs_module' => 'Emails',
     'lhs_table' => 'emails',
@@ -2757,7 +1351,7 @@
   ),
   'emails_contacts_rel' => 
   array (
-    'id' => '6a4b7cef-00d0-97b2-41ce-52c07cace548',
+    'id' => '275c1eab-0a73-8a74-1777-52c0bd418339',
     'relationship_name' => 'emails_contacts_rel',
     'lhs_module' => 'Emails',
     'lhs_table' => 'emails',
@@ -2776,7 +1370,7 @@
   ),
   'emails_accounts_rel' => 
   array (
-    'id' => '6a6eb380-e4e6-8402-2e69-52c07c0dfffa',
+    'id' => '278829dd-9b0c-770f-528e-52c0bde42c59',
     'relationship_name' => 'emails_accounts_rel',
     'lhs_module' => 'Emails',
     'lhs_table' => 'emails',
@@ -2795,7 +1389,7 @@
   ),
   'emails_leads_rel' => 
   array (
-    'id' => '6a9c2c1d-7018-0b61-f4bb-52c07cb57122',
+    'id' => '27b35b73-c9a8-c291-cfe4-52c0bdbe8fe6',
     'relationship_name' => 'emails_leads_rel',
     'lhs_module' => 'Emails',
     'lhs_table' => 'emails',
@@ -2814,7 +1408,7 @@
   ),
   'emails_meetings_rel' => 
   array (
-    'id' => '6abcecf1-1831-84e5-3cff-52c07c4ffdf4',
+    'id' => '27de99e4-db21-cfc3-f966-52c0bd69873f',
     'relationship_name' => 'emails_meetings_rel',
     'lhs_module' => 'Emails',
     'lhs_table' => 'emails',
@@ -2833,7 +1427,7 @@
   ),
   'meetings_modified_user' => 
   array (
-    'id' => '6b2f3951-16b1-70be-c0e5-52c07c48190b',
+    'id' => '2a03a9a3-50e2-27a4-0f63-52c0bd76b2ba',
     'relationship_name' => 'meetings_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -2852,7 +1446,7 @@
   ),
   'meetings_created_by' => 
   array (
-    'id' => '6b5b3053-5a02-7392-dcbe-52c07c8738a9',
+    'id' => '2a35713d-165c-b135-8d27-52c0bd8cea8a',
     'relationship_name' => 'meetings_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -2871,7 +1465,7 @@
   ),
   'meetings_assigned_user' => 
   array (
-    'id' => '6b7f7863-848c-8b65-4518-52c07cc165f9',
+    'id' => '2a5d3c3e-393d-c7b6-a829-52c0bd2327d5',
     'relationship_name' => 'meetings_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -2890,7 +1484,7 @@
   ),
   'meetings_notes' => 
   array (
-    'id' => '6ba2b4fc-9a12-0fec-245f-52c07c6d35f4',
+    'id' => '2a8b8997-ddf8-fa11-7d8d-52c0bd7fcce7',
     'relationship_name' => 'meetings_notes',
     'lhs_module' => 'Meetings',
     'lhs_table' => 'meetings',
@@ -2909,7 +1503,7 @@
   ),
   'tasks_modified_user' => 
   array (
-    'id' => '6c04b1ae-e372-80e7-4506-52c07c74a5c2',
+    'id' => '2b74e101-02ff-b481-cdf5-52c0bd2dd9ac',
     'relationship_name' => 'tasks_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -2928,7 +1522,7 @@
   ),
   'tasks_created_by' => 
   array (
-    'id' => '6c32d92f-487c-3aa4-32e1-52c07cdc9eeb',
+    'id' => '2ba9e26c-7250-1261-931c-52c0bd6d46f2',
     'relationship_name' => 'tasks_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -2947,7 +1541,7 @@
   ),
   'tasks_assigned_user' => 
   array (
-    'id' => '6c62a02d-aa36-8171-2b72-52c07c2912a1',
+    'id' => '2bd3c3ab-8d5f-f325-21a4-52c0bd3d8db7',
     'relationship_name' => 'tasks_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -2966,7 +1560,7 @@
   ),
   'tasks_notes' => 
   array (
-    'id' => '6c872255-fbca-7f51-f543-52c07ced073c',
+    'id' => '2bf8ab58-9946-c99e-9ee1-52c0bd4ff2cd',
     'relationship_name' => 'tasks_notes',
     'lhs_module' => 'Tasks',
     'lhs_table' => 'tasks',
@@ -2983,9 +1577,47 @@
     'reverse' => '0',
     'deleted' => '0',
   ),
+  'campaignlog_contact' => 
+  array (
+    'id' => '2f560852-b4fc-1007-a559-52c0bd0ee684',
+    'relationship_name' => 'campaignlog_contact',
+    'lhs_module' => 'CampaignLog',
+    'lhs_table' => 'campaign_log',
+    'lhs_key' => 'related_id',
+    'rhs_module' => 'Contacts',
+    'rhs_table' => 'contacts',
+    'rhs_key' => 'id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'campaignlog_lead' => 
+  array (
+    'id' => '32260211-df39-2d3a-5edc-52c0bd33dcbd',
+    'relationship_name' => 'campaignlog_lead',
+    'lhs_module' => 'CampaignLog',
+    'lhs_table' => 'campaign_log',
+    'lhs_key' => 'related_id',
+    'rhs_module' => 'Leads',
+    'rhs_table' => 'leads',
+    'rhs_key' => 'id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
   'documents_modified_user' => 
   array (
-    'id' => '6e0eeb95-9add-ae95-f917-52c07c97bedc',
+    'id' => '327a9e07-f66d-e98e-f023-52c0bd144781',
     'relationship_name' => 'documents_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3004,7 +1636,7 @@
   ),
   'documents_created_by' => 
   array (
-    'id' => '6e4574ed-9974-848e-d20b-52c07cd07fe1',
+    'id' => '32a4d903-ccbb-b49a-9b30-52c0bdaaa96e',
     'relationship_name' => 'documents_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3023,7 +1655,7 @@
   ),
   'documents_assigned_user' => 
   array (
-    'id' => '6e68ecab-c398-e884-5960-52c07cd762cf',
+    'id' => '32c85ad6-1cfc-ff44-18e8-52c0bd014f08',
     'relationship_name' => 'documents_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3042,7 +1674,7 @@
   ),
   'document_revisions' => 
   array (
-    'id' => '6e8c1e6a-24b1-6182-d52a-52c07ca3aca8',
+    'id' => '32eb1e94-756b-7275-a183-52c0bdbc8c00',
     'relationship_name' => 'document_revisions',
     'lhs_module' => 'Documents',
     'lhs_table' => 'documents',
@@ -3061,7 +1693,7 @@
   ),
   'revisions_created_by' => 
   array (
-    'id' => '6ec37ed3-7be4-497b-9107-52c07c8a69bb',
+    'id' => '33b8cdee-697d-a2cc-8bb9-52c0bde3fd32',
     'relationship_name' => 'revisions_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3078,9 +1710,47 @@
     'reverse' => '0',
     'deleted' => '0',
   ),
+  'campaignlog_created_opportunities' => 
+  array (
+    'id' => '347306d4-d466-2fe9-ce99-52c0bd740e2c',
+    'relationship_name' => 'campaignlog_created_opportunities',
+    'lhs_module' => 'CampaignLog',
+    'lhs_table' => 'campaign_log',
+    'lhs_key' => 'related_id',
+    'rhs_module' => 'Opportunities',
+    'rhs_table' => 'opportunities',
+    'rhs_key' => 'id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'campaignlog_targeted_users' => 
+  array (
+    'id' => '372e0828-19bf-ff67-6301-52c0bd4bfb88',
+    'relationship_name' => 'campaignlog_targeted_users',
+    'lhs_module' => 'CampaignLog',
+    'lhs_table' => 'campaign_log',
+    'lhs_key' => 'target_id',
+    'rhs_module' => 'Users',
+    'rhs_table' => 'users',
+    'rhs_key' => 'id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
   'inbound_email_created_by' => 
   array (
-    'id' => '6f321c3f-abbe-e707-24f1-52c07cde451a',
+    'id' => '38159787-9cff-2173-9de7-52c0bdf105d0',
     'relationship_name' => 'inbound_email_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3099,7 +1769,7 @@
   ),
   'inbound_email_modified_user_id' => 
   array (
-    'id' => '6f5f56ed-ea79-2f7e-5e2a-52c07c1f4307',
+    'id' => '384e1ae7-bbfd-763a-cfb2-52c0bdfe532f',
     'relationship_name' => 'inbound_email_modified_user_id',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3118,7 +1788,7 @@
   ),
   'saved_search_assigned_user' => 
   array (
-    'id' => '6fa4f743-4da9-ebf1-6118-52c07cd71047',
+    'id' => '396efdd1-656c-89dc-4d4c-52c0bdee70f0',
     'relationship_name' => 'saved_search_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3135,9 +1805,28 @@
     'reverse' => '0',
     'deleted' => '0',
   ),
+  'campaignlog_sent_emails' => 
+  array (
+    'id' => '39790cc4-ad4a-61f4-ab3c-52c0bd57da42',
+    'relationship_name' => 'campaignlog_sent_emails',
+    'lhs_module' => 'CampaignLog',
+    'lhs_table' => 'campaign_log',
+    'lhs_key' => 'related_id',
+    'rhs_module' => 'Emails',
+    'rhs_table' => 'emails',
+    'rhs_key' => 'id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
   'sugarfeed_modified_user' => 
   array (
-    'id' => '70381700-ec99-cecc-81a7-52c07cac239e',
+    'id' => '3bb50be5-1c39-7744-8c02-52c0bd05ed4f',
     'relationship_name' => 'sugarfeed_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3156,7 +1845,7 @@
   ),
   'sugarfeed_created_by' => 
   array (
-    'id' => '70624591-4110-b4f2-9715-52c07c4a361d',
+    'id' => '3be3e46a-2ffc-b847-b816-52c0bd66fb59',
     'relationship_name' => 'sugarfeed_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3175,7 +1864,7 @@
   ),
   'sugarfeed_assigned_user' => 
   array (
-    'id' => '708716f2-f2b1-3dfc-e7b0-52c07c6f9f88',
+    'id' => '3c08d2b8-1a14-a55a-2f62-52c0bdf00c6c',
     'relationship_name' => 'sugarfeed_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3192,9 +1881,28 @@
     'reverse' => '0',
     'deleted' => '0',
   ),
+  'bug_tasks' => 
+  array (
+    'id' => '3d1001ad-f002-4c14-1e39-52c0bd096474',
+    'relationship_name' => 'bug_tasks',
+    'lhs_module' => 'Bugs',
+    'lhs_table' => 'bugs',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Tasks',
+    'rhs_table' => 'tasks',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Bugs',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
   'eapm_modified_user' => 
   array (
-    'id' => '70e8beac-7b27-2ca5-7bb6-52c07c9d71c6',
+    'id' => '3f7c860e-c082-ba27-562f-52c0bd9048a2',
     'relationship_name' => 'eapm_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3213,7 +1921,7 @@
   ),
   'eapm_created_by' => 
   array (
-    'id' => '711297d4-5a1a-3e0f-0d03-52c07cd63231',
+    'id' => '3fab0f9f-1d2c-a8d5-a927-52c0bdaa6cc0',
     'relationship_name' => 'eapm_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3232,7 +1940,7 @@
   ),
   'eapm_assigned_user' => 
   array (
-    'id' => '71360ae9-a545-8614-05a9-52c07c5eb831',
+    'id' => '3fd210e3-eb1f-4c32-848e-52c0bdaaec4e',
     'relationship_name' => 'eapm_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3251,7 +1959,7 @@
   ),
   'oauthkeys_modified_user' => 
   array (
-    'id' => '71874b40-418d-3fa9-8932-52c07c284bdf',
+    'id' => '4108595d-a9bd-0554-1b6d-52c0bdbdcc35',
     'relationship_name' => 'oauthkeys_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3270,7 +1978,7 @@
   ),
   'oauthkeys_created_by' => 
   array (
-    'id' => '71b04e19-a871-7a25-dfa0-52c07c8e8417',
+    'id' => '41368f12-9de9-8c70-690f-52c0bd8c135c',
     'relationship_name' => 'oauthkeys_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3289,7 +1997,7 @@
   ),
   'oauthkeys_assigned_user' => 
   array (
-    'id' => '71d3752a-1a00-9371-aa7c-52c07c597edc',
+    'id' => '415b4c41-a8fc-22ab-c5a3-52c0bd8a7e78',
     'relationship_name' => 'oauthkeys_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3308,7 +2016,7 @@
   ),
   'consumer_tokens' => 
   array (
-    'id' => '7208ccaf-5950-e864-b579-52c07cdc76e2',
+    'id' => '42387db0-e716-7acf-e949-52c0bd11aa99',
     'relationship_name' => 'consumer_tokens',
     'lhs_module' => 'OAuthKeys',
     'lhs_table' => 'oauth_consumer',
@@ -3327,7 +2035,7 @@
   ),
   'oauthtokens_assigned_user' => 
   array (
-    'id' => '723ae1a7-1b0d-4664-1875-52c07c4c0006',
+    'id' => '4277883f-99d2-b3a7-52eb-52c0bdf25e18',
     'relationship_name' => 'oauthtokens_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3346,7 +2054,7 @@
   ),
   'fp_events_modified_user' => 
   array (
-    'id' => '729ea870-8445-40ba-40bd-52c07cd3278b',
+    'id' => '43ddf774-6852-c3b2-056d-52c0bde95367',
     'relationship_name' => 'fp_events_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3365,7 +2073,7 @@
   ),
   'fp_events_created_by' => 
   array (
-    'id' => '72c93d16-051e-4b98-1a5a-52c07c4a7733',
+    'id' => '440c7bda-9fe8-4719-a4ca-52c0bd17c394',
     'relationship_name' => 'fp_events_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3384,7 +2092,7 @@
   ),
   'fp_events_assigned_user' => 
   array (
-    'id' => '72eef79b-d4d1-3723-0a6a-52c07cd36000',
+    'id' => '44315d5b-f379-b27b-5289-52c0bdf56b5f',
     'relationship_name' => 'fp_events_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3403,7 +2111,7 @@
   ),
   'fp_event_locations_modified_user' => 
   array (
-    'id' => '7352159c-09d3-1c43-5619-52c07c06230c',
+    'id' => '456d1cc0-c157-3952-ea39-52c0bd2e9b10',
     'relationship_name' => 'fp_event_locations_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3422,7 +2130,7 @@
   ),
   'fp_event_locations_created_by' => 
   array (
-    'id' => '737c2cbd-d6c3-bfc6-752d-52c07ca6eb86',
+    'id' => '459ea269-171b-32a3-f8e2-52c0bd75a374',
     'relationship_name' => 'fp_event_locations_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3441,7 +2149,7 @@
   ),
   'fp_event_locations_assigned_user' => 
   array (
-    'id' => '739f73af-17d5-1c9d-c3b4-52c07c332af6',
+    'id' => '45c4c8b8-aa2c-9457-56fe-52c0bdf4f476',
     'relationship_name' => 'fp_event_locations_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3460,7 +2168,7 @@
   ),
   'optimistic_locking' => 
   array (
-    'id' => '73c33cc0-47a8-c4bf-9740-52c07c4b8912',
+    'id' => '45e8ab22-e29a-e38b-a572-52c0bd7577bf',
     'relationship_name' => 'optimistic_locking',
     'lhs_module' => NULL,
     'lhs_table' => NULL,
@@ -3479,7 +2187,7 @@
   ),
   'unified_search' => 
   array (
-    'id' => '73e61620-d9d2-73f6-4c6a-52c07c0e3fa6',
+    'id' => '460978f3-0fda-1af8-5f54-52c0bdeb3f8c',
     'relationship_name' => 'unified_search',
     'lhs_module' => NULL,
     'lhs_table' => NULL,
@@ -3498,7 +2206,7 @@
   ),
   'aop_case_events_modified_user' => 
   array (
-    'id' => '743b4bc5-31d4-00e5-c45d-52c07c168cea',
+    'id' => '4730a3c8-abfd-2a95-6a72-52c0bd608123',
     'relationship_name' => 'aop_case_events_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3517,7 +2225,7 @@
   ),
   'aop_case_events_created_by' => 
   array (
-    'id' => '7464fa46-5182-48f0-453e-52c07c36a1c0',
+    'id' => '47658b5c-b1c7-8d97-2ec8-52c0bd81a9cd',
     'relationship_name' => 'aop_case_events_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3536,7 +2244,7 @@
   ),
   'aop_case_events_assigned_user' => 
   array (
-    'id' => '74897e0a-326b-15ba-7baf-52c07c68987e',
+    'id' => '478fb4dd-8c27-c075-0e44-52c0bd0899fe',
     'relationship_name' => 'aop_case_events_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3555,7 +2263,7 @@
   ),
   'cases_aop_case_events' => 
   array (
-    'id' => '74ac0d1c-5b14-68d0-95ef-52c07c38a523',
+    'id' => '47b3b25f-cb71-c8b6-2a28-52c0bde0c2b3',
     'relationship_name' => 'cases_aop_case_events',
     'lhs_module' => 'Cases',
     'lhs_table' => 'cases',
@@ -3574,7 +2282,7 @@
   ),
   'aop_case_updates_modified_user' => 
   array (
-    'id' => '7505d518-222b-52dd-e808-52c07c4b31cb',
+    'id' => '48f4b081-95c6-0b2b-2bf0-52c0bdd487d8',
     'relationship_name' => 'aop_case_updates_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3593,7 +2301,7 @@
   ),
   'aop_case_updates_created_by' => 
   array (
-    'id' => '753cff73-0e78-4071-3285-52c07c19825e',
+    'id' => '492363eb-eb45-b4f5-4cc9-52c0bd79b4f6',
     'relationship_name' => 'aop_case_updates_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3612,7 +2320,7 @@
   ),
   'aop_case_updates_assigned_user' => 
   array (
-    'id' => '755fe928-0b3b-5072-6014-52c07ce4e6f5',
+    'id' => '4949869a-1c32-e97e-a4ea-52c0bd6d60a7',
     'relationship_name' => 'aop_case_updates_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3631,7 +2339,7 @@
   ),
   'cases_aop_case_updates' => 
   array (
-    'id' => '757f2a1f-2f8b-665f-b5bf-52c07caa8779',
+    'id' => '496ca4ef-ea67-6f0d-6bc5-52c0bdf292b3',
     'relationship_name' => 'cases_aop_case_updates',
     'lhs_module' => 'Cases',
     'lhs_table' => 'cases',
@@ -3650,7 +2358,7 @@
   ),
   'aop_case_updates_notes' => 
   array (
-    'id' => '75aaa861-5ca2-6769-4e0e-52c07c941321',
+    'id' => '499b57c5-940f-c3fd-7918-52c0bd9de948',
     'relationship_name' => 'aop_case_updates_notes',
     'lhs_module' => 'AOP_Case_Updates',
     'lhs_table' => 'aop_case_updates',
@@ -3669,7 +2377,7 @@
   ),
   'aor_reports_modified_user' => 
   array (
-    'id' => '760a92a0-7378-be93-b2af-52c07c224589',
+    'id' => '4a6c237a-3404-4a57-b33b-52c0bd4fa447',
     'relationship_name' => 'aor_reports_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3688,7 +2396,7 @@
   ),
   'aor_reports_created_by' => 
   array (
-    'id' => '76365b37-1248-8180-01f7-52c07cfc155d',
+    'id' => '4ab0f71e-269c-2bf3-6c42-52c0bd38cb83',
     'relationship_name' => 'aor_reports_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3707,7 +2415,7 @@
   ),
   'aor_reports_assigned_user' => 
   array (
-    'id' => '765ca674-23bb-6037-f49f-52c07c2b2810',
+    'id' => '4adf2c94-7ed0-df86-b5a3-52c0bdeb5e54',
     'relationship_name' => 'aor_reports_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3726,7 +2434,7 @@
   ),
   'aor_reports_aor_fields' => 
   array (
-    'id' => '7682b288-7c34-9197-5ad1-52c07cceeb80',
+    'id' => '4b0ad7e5-30cd-a2e3-fbd4-52c0bd070717',
     'relationship_name' => 'aor_reports_aor_fields',
     'lhs_module' => 'AOR_Reports',
     'lhs_table' => 'aor_reports',
@@ -3745,7 +2453,7 @@
   ),
   'aor_reports_aor_conditions' => 
   array (
-    'id' => '76a4a809-4dff-31a5-b984-52c07c2069a0',
+    'id' => '4b2f0b56-7cd6-bbd3-75f2-52c0bdd47c85',
     'relationship_name' => 'aor_reports_aor_conditions',
     'lhs_module' => 'AOR_Reports',
     'lhs_table' => 'aor_reports',
@@ -3764,7 +2472,7 @@
   ),
   'aor_fields_modified_user' => 
   array (
-    'id' => '76fcb55a-28e2-915b-d7f1-52c07c094696',
+    'id' => '4c572769-9250-3001-ac3c-52c0bdac2e85',
     'relationship_name' => 'aor_fields_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3783,7 +2491,7 @@
   ),
   'aor_fields_created_by' => 
   array (
-    'id' => '77310601-b17c-c152-66ae-52c07ce4f842',
+    'id' => '4c859959-53da-afbf-385f-52c0bd04757b',
     'relationship_name' => 'aor_fields_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3802,7 +2510,7 @@
   ),
   'aor_charts_modified_user' => 
   array (
-    'id' => '7779a74a-cc0f-bd82-1054-52c07cba9481',
+    'id' => '4d5da0a2-cd28-d4a9-11bf-52c0bdfd0c5c',
     'relationship_name' => 'aor_charts_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3821,7 +2529,7 @@
   ),
   'aor_charts_created_by' => 
   array (
-    'id' => '77b60cd5-e87b-88a6-ada9-52c07c862686',
+    'id' => '4d8c3d55-35b7-bb0d-408a-52c0bd2015eb',
     'relationship_name' => 'aor_charts_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3840,7 +2548,7 @@
   ),
   'aor_conditions_modified_user' => 
   array (
-    'id' => '78067aa9-c95a-cc0e-8f87-52c07cf7e602',
+    'id' => '4ea0578c-5e93-6d41-5add-52c0bdf82435',
     'relationship_name' => 'aor_conditions_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3857,9 +2565,28 @@
     'reverse' => '0',
     'deleted' => '0',
   ),
+  'projects_notes' => 
+  array (
+    'id' => '4ebf090b-a212-db2c-01fa-52c0bd1ed48e',
+    'relationship_name' => 'projects_notes',
+    'lhs_module' => 'Project',
+    'lhs_table' => 'project',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Notes',
+    'rhs_table' => 'notes',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Project',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
   'aor_conditions_created_by' => 
   array (
-    'id' => '7828d076-f10e-936e-e21d-52c07c873ac6',
+    'id' => '4ecebf1e-2542-7509-c72a-52c0bdf682eb',
     'relationship_name' => 'aor_conditions_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3878,7 +2605,7 @@
   ),
   'aos_contracts_modified_user' => 
   array (
-    'id' => '78a87142-f1b0-e4f3-4c60-52c07c3f48e2',
+    'id' => '50b202c7-f37c-db33-bc2a-52c0bd17be24',
     'relationship_name' => 'aos_contracts_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3897,7 +2624,7 @@
   ),
   'aos_contracts_created_by' => 
   array (
-    'id' => '78d34dee-cab0-0509-3882-52c07c3e97b6',
+    'id' => '50ea1e2c-d57b-3c3b-e789-52c0bd540076',
     'relationship_name' => 'aos_contracts_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3916,7 +2643,7 @@
   ),
   'aos_contracts_assigned_user' => 
   array (
-    'id' => '78f7f167-4931-3f91-28e6-52c07cfeda7e',
+    'id' => '5110ecb0-9eac-b704-af88-52c0bdd68d13',
     'relationship_name' => 'aos_contracts_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3935,7 +2662,7 @@
   ),
   'aos_contracts_aos_product_quotes' => 
   array (
-    'id' => '791b2b78-5afc-385b-06d0-52c07c25c1c9',
+    'id' => '5135cf14-aea0-1981-c8cf-52c0bdfae72c',
     'relationship_name' => 'aos_contracts_aos_product_quotes',
     'lhs_module' => 'AOS_Contracts',
     'lhs_table' => 'aos_contracts',
@@ -3952,9 +2679,28 @@
     'reverse' => '0',
     'deleted' => '0',
   ),
+  'projects_tasks' => 
+  array (
+    'id' => '526f02a3-324c-dcb6-9528-52c0bd2f4115',
+    'relationship_name' => 'projects_tasks',
+    'lhs_module' => 'Project',
+    'lhs_table' => 'project',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Tasks',
+    'rhs_table' => 'tasks',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Project',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
   'aos_invoices_modified_user' => 
   array (
-    'id' => '798c54eb-7226-ca69-0a7e-52c07cc1f015',
+    'id' => '52ea9e98-0e09-ab21-ae3e-52c0bd43e598',
     'relationship_name' => 'aos_invoices_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3973,7 +2719,7 @@
   ),
   'aos_invoices_created_by' => 
   array (
-    'id' => '79c0d01a-523c-2d68-644f-52c07cc9d544',
+    'id' => '531e833f-ae6a-66dd-cd3d-52c0bd1d2f07',
     'relationship_name' => 'aos_invoices_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -3992,7 +2738,7 @@
   ),
   'aos_invoices_assigned_user' => 
   array (
-    'id' => '79e36fa0-925e-c2d1-e0e9-52c07cbfd328',
+    'id' => '534705c8-49ac-c869-c8cd-52c0bd1d734a',
     'relationship_name' => 'aos_invoices_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4011,7 +2757,7 @@
   ),
   'aos_invoices_aos_product_quotes' => 
   array (
-    'id' => '7a0393c2-9d94-7ded-a2a2-52c07c38e2f1',
+    'id' => '53722c0d-5bf0-e5dc-87d5-52c0bd397456',
     'relationship_name' => 'aos_invoices_aos_product_quotes',
     'lhs_module' => 'AOS_Invoices',
     'lhs_table' => 'aos_invoices',
@@ -4030,7 +2776,7 @@
   ),
   'aos_pdf_templates_modified_user' => 
   array (
-    'id' => '7a5da180-340d-1179-9a9c-52c07cb650d3',
+    'id' => '54168a72-a1e6-8f51-4a84-52c0bd8bb27b',
     'relationship_name' => 'aos_pdf_templates_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4049,7 +2795,7 @@
   ),
   'aos_pdf_templates_created_by' => 
   array (
-    'id' => '7a8850be-8ff0-f59b-d5e3-52c07cb2f020',
+    'id' => '54473a19-3e48-b80e-e9c7-52c0bd2cbe1a',
     'relationship_name' => 'aos_pdf_templates_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4068,7 +2814,7 @@
   ),
   'aos_pdf_templates_assigned_user' => 
   array (
-    'id' => '7aadb9d1-f4d8-cc89-93f4-52c07c107df6',
+    'id' => '5478da9a-d167-87c9-a741-52c0bd2d6021',
     'relationship_name' => 'aos_pdf_templates_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4087,7 +2833,7 @@
   ),
   'aos_product_categories_modified_user' => 
   array (
-    'id' => '7b019101-6026-b99f-df1a-52c07c088a2a',
+    'id' => '559f153c-e5ac-c6c4-27fd-52c0bd10869d',
     'relationship_name' => 'aos_product_categories_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4106,7 +2852,7 @@
   ),
   'aos_product_categories_created_by' => 
   array (
-    'id' => '7b2ba87a-2ba5-07f8-c0fe-52c07cd09778',
+    'id' => '55ce809f-230b-1a75-acde-52c0bd7ddfbe',
     'relationship_name' => 'aos_product_categories_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4123,9 +2869,28 @@
     'reverse' => '0',
     'deleted' => '0',
   ),
+  'projects_meetings' => 
+  array (
+    'id' => '55e70ca0-ffbb-4cbf-22f3-52c0bd7febfe',
+    'relationship_name' => 'projects_meetings',
+    'lhs_module' => 'Project',
+    'lhs_table' => 'project',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Meetings',
+    'rhs_table' => 'meetings',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Project',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
   'aos_product_categories_assigned_user' => 
   array (
-    'id' => '7b50635b-02e4-f9d5-34a0-52c07c0c1b24',
+    'id' => '55f36e81-7d7d-e8c8-633b-52c0bd77ad7f',
     'relationship_name' => 'aos_product_categories_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4144,7 +2909,7 @@
   ),
   'sub_product_categories' => 
   array (
-    'id' => '7b736978-3f9e-129b-8d37-52c07c28765f',
+    'id' => '561568f2-693d-f82e-6c09-52c0bdd760b2',
     'relationship_name' => 'sub_product_categories',
     'lhs_module' => 'AOS_Product_Categories',
     'lhs_table' => 'aos_product_categories',
@@ -4163,7 +2928,7 @@
   ),
   'aos_products_modified_user' => 
   array (
-    'id' => '7bd8fae4-3acc-231e-02a0-52c07c6970d2',
+    'id' => '56aaba46-7a11-0630-71f4-52c0bdac01a2',
     'relationship_name' => 'aos_products_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4182,7 +2947,7 @@
   ),
   'aos_products_created_by' => 
   array (
-    'id' => '7c02da39-5b18-acd9-2996-52c07cd8f066',
+    'id' => '56dd656f-126a-b604-83b4-52c0bd20fc3b',
     'relationship_name' => 'aos_products_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4201,7 +2966,7 @@
   ),
   'aos_products_assigned_user' => 
   array (
-    'id' => '7c2638ce-ca87-84fd-4907-52c07c2cf75c',
+    'id' => '57054ab6-3b37-2d6b-4e34-52c0bd5494e6',
     'relationship_name' => 'aos_products_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4220,7 +2985,7 @@
   ),
   'product_categories' => 
   array (
-    'id' => '7c4964f0-791d-e752-ecd1-52c07c9714de',
+    'id' => '572a5721-b405-ce2e-4856-52c0bd589b3e',
     'relationship_name' => 'product_categories',
     'lhs_module' => 'AOS_Product_Categories',
     'lhs_table' => 'aos_product_categories',
@@ -4239,7 +3004,7 @@
   ),
   'aos_products_quotes_modified_user' => 
   array (
-    'id' => '7cabc247-bca7-9a9d-0fcb-52c07cf45692',
+    'id' => '58bd845a-2192-4081-377b-52c0bd146a71',
     'relationship_name' => 'aos_products_quotes_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4258,7 +3023,7 @@
   ),
   'aos_products_quotes_created_by' => 
   array (
-    'id' => '7cd6586c-1c2f-1fef-b7f0-52c07ce311ab',
+    'id' => '58f042de-b8c9-a104-7d06-52c0bd6e2409',
     'relationship_name' => 'aos_products_quotes_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4275,9 +3040,28 @@
     'reverse' => '0',
     'deleted' => '0',
   ),
+  'projects_calls' => 
+  array (
+    'id' => '58fb0675-7c07-b649-b7b4-52c0bd963322',
+    'relationship_name' => 'projects_calls',
+    'lhs_module' => 'Project',
+    'lhs_table' => 'project',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Calls',
+    'rhs_table' => 'calls',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Project',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
   'aos_products_quotes_assigned_user' => 
   array (
-    'id' => '7d00869f-fd97-a009-781e-52c07c28a459',
+    'id' => '5916c4ef-91b5-e6f8-d2f4-52c0bd17eff8',
     'relationship_name' => 'aos_products_quotes_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4296,7 +3080,7 @@
   ),
   'aos_product_quotes_aos_products' => 
   array (
-    'id' => '7d2449bf-3cc5-aa29-ae39-52c07c5a5eb8',
+    'id' => '593a31b0-71f2-6e42-046c-52c0bd24ce92',
     'relationship_name' => 'aos_product_quotes_aos_products',
     'lhs_module' => 'AOS_Products',
     'lhs_table' => 'aos_products',
@@ -4315,7 +3099,7 @@
   ),
   'aos_line_item_groups_modified_user' => 
   array (
-    'id' => '7d7d0c22-3d66-4438-c404-52c07c61ead4',
+    'id' => '5a6e5851-96d5-5699-762d-52c0bde18327',
     'relationship_name' => 'aos_line_item_groups_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4334,7 +3118,7 @@
   ),
   'aos_line_item_groups_created_by' => 
   array (
-    'id' => '7db4872c-002d-4613-d1a8-52c07c4a77fa',
+    'id' => '5aa31102-898f-a6fc-38c2-52c0bdad0939',
     'relationship_name' => 'aos_line_item_groups_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4353,7 +3137,7 @@
   ),
   'aos_line_item_groups_assigned_user' => 
   array (
-    'id' => '7dd71176-666d-dc6c-5a03-52c07c7eab82',
+    'id' => '5acb79ca-5ac4-8449-f701-52c0bd21edb4',
     'relationship_name' => 'aos_line_item_groups_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4370,9 +3154,28 @@
     'reverse' => '0',
     'deleted' => '0',
   ),
+  'projects_emails' => 
+  array (
+    'id' => '5b6c0b12-bd34-f7bf-10c8-52c0bd33f130',
+    'relationship_name' => 'projects_emails',
+    'lhs_module' => 'Project',
+    'lhs_table' => 'project',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Emails',
+    'rhs_table' => 'emails',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Project',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
   'aos_quotes_modified_user' => 
   array (
-    'id' => '7e54012b-ec61-1809-f944-52c07c531831',
+    'id' => '5c8643c5-1b2c-6209-ea3e-52c0bd976ee8',
     'relationship_name' => 'aos_quotes_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4391,7 +3194,7 @@
   ),
   'aos_quotes_created_by' => 
   array (
-    'id' => '7e7d1f75-d95e-d6d5-e4fc-52c07c19fc92',
+    'id' => '5cb59310-7e87-1cff-6943-52c0bd61ed43',
     'relationship_name' => 'aos_quotes_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4410,7 +3213,7 @@
   ),
   'aos_quotes_assigned_user' => 
   array (
-    'id' => '7e9fd421-8ae6-ecdd-ab5a-52c07cbd661d',
+    'id' => '5ce9f0a1-51c2-d2c5-8eca-52c0bd5d521c',
     'relationship_name' => 'aos_quotes_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4429,7 +3232,7 @@
   ),
   'aos_quotes_aos_product_quotes' => 
   array (
-    'id' => '7ec1eefc-2eed-a865-35e0-52c07cf17fea',
+    'id' => '5d0e6528-cd97-0e99-d728-52c0bd6a50b6',
     'relationship_name' => 'aos_quotes_aos_product_quotes',
     'lhs_module' => 'AOS_Quotes',
     'lhs_table' => 'aos_quotes',
@@ -4446,9 +3249,28 @@
     'reverse' => '0',
     'deleted' => '0',
   ),
+  'projects_project_tasks' => 
+  array (
+    'id' => '5db60548-7f4e-2224-2d38-52c0bdf581be',
+    'relationship_name' => 'projects_project_tasks',
+    'lhs_module' => 'Project',
+    'lhs_table' => 'project',
+    'lhs_key' => 'id',
+    'rhs_module' => 'ProjectTask',
+    'rhs_table' => 'project_task',
+    'rhs_key' => 'project_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
   'aow_actions_modified_user' => 
   array (
-    'id' => '7f0e2601-c558-6387-4df2-52c07c3b5ae2',
+    'id' => '5e06e1f3-2fbc-5e05-df45-52c0bd52f963',
     'relationship_name' => 'aow_actions_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4467,7 +3289,7 @@
   ),
   'aow_actions_created_by' => 
   array (
-    'id' => '7f3932df-3afa-6bf8-fa1b-52c07c20cba5',
+    'id' => '5e37fda8-312b-5404-aa87-52c0bdd01941',
     'relationship_name' => 'aow_actions_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4486,7 +3308,7 @@
   ),
   'aow_workflow_modified_user' => 
   array (
-    'id' => '7f9d71bc-9c4b-eb1e-e077-52c07cf3ab33',
+    'id' => '5f2b4011-77f1-f70f-c9a8-52c0bd9ee8a6',
     'relationship_name' => 'aow_workflow_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4505,7 +3327,7 @@
   ),
   'aow_workflow_created_by' => 
   array (
-    'id' => '7fc4fc2a-ae5a-cd97-dbee-52c07c4b62bd',
+    'id' => '5f5c1380-1572-e3a5-cd4b-52c0bd3e3b06',
     'relationship_name' => 'aow_workflow_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4524,7 +3346,7 @@
   ),
   'aow_workflow_assigned_user' => 
   array (
-    'id' => '7feae719-0cf1-cc18-1784-52c07c17b8f6',
+    'id' => '5f8df997-d59a-fe9f-273b-52c0bd2fb5b6',
     'relationship_name' => 'aow_workflow_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4543,7 +3365,7 @@
   ),
   'aow_workflow_aow_conditions' => 
   array (
-    'id' => '80184aa9-def7-5e48-31be-52c07cbd6d16',
+    'id' => '5fb8c9b4-89cd-2b61-bf54-52c0bd4dc779',
     'relationship_name' => 'aow_workflow_aow_conditions',
     'lhs_module' => 'AOW_WorkFlow',
     'lhs_table' => 'aow_workflow',
@@ -4562,7 +3384,7 @@
   ),
   'aow_workflow_aow_actions' => 
   array (
-    'id' => '803a971e-f914-1d2c-a0df-52c07c8e183f',
+    'id' => '5fe8bd7c-4101-0bf7-cdb2-52c0bd140e24',
     'relationship_name' => 'aow_workflow_aow_actions',
     'lhs_module' => 'AOW_WorkFlow',
     'lhs_table' => 'aow_workflow',
@@ -4579,9 +3401,28 @@
     'reverse' => '0',
     'deleted' => '0',
   ),
+  'projects_assigned_user' => 
+  array (
+    'id' => '5fee074a-988a-e771-a4e8-52c0bd874a1f',
+    'relationship_name' => 'projects_assigned_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Project',
+    'rhs_table' => 'project',
+    'rhs_key' => 'assigned_user_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
   'aow_workflow_aow_processed' => 
   array (
-    'id' => '805ad0f2-5913-c997-2422-52c07c3fe0e5',
+    'id' => '60134ba2-8267-4de1-2f3f-52c0bd284de8',
     'relationship_name' => 'aow_workflow_aow_processed',
     'lhs_module' => 'AOW_WorkFlow',
     'lhs_table' => 'aow_workflow',
@@ -4600,7 +3441,7 @@
   ),
   'aow_processed_modified_user' => 
   array (
-    'id' => '80ab157b-6725-e066-7f44-52c07ce729f9',
+    'id' => '611f7e38-b802-f22a-f140-52c0bd78239e',
     'relationship_name' => 'aow_processed_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4619,7 +3460,7 @@
   ),
   'aow_processed_created_by' => 
   array (
-    'id' => '80d38425-942b-22c9-b321-52c07ce79ea7',
+    'id' => '614df595-edac-a145-dc89-52c0bd254be1',
     'relationship_name' => 'aow_processed_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4636,9 +3477,47 @@
     'reverse' => '0',
     'deleted' => '0',
   ),
+  'projects_modified_user' => 
+  array (
+    'id' => '62170792-4bf1-98f9-cb8c-52c0bdcfa480',
+    'relationship_name' => 'projects_modified_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Project',
+    'rhs_table' => 'project',
+    'rhs_key' => 'modified_user_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'bug_meetings' => 
+  array (
+    'id' => '62300475-a349-0b2c-d27e-52c0bd3a6f14',
+    'relationship_name' => 'bug_meetings',
+    'lhs_module' => 'Bugs',
+    'lhs_table' => 'bugs',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Meetings',
+    'rhs_table' => 'meetings',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Bugs',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
   'aow_conditions_modified_user' => 
   array (
-    'id' => '8124dd54-c2d8-52f5-416f-52c07cc7e6b2',
+    'id' => '6265136b-0450-4f28-ca4e-52c0bdd929f9',
     'relationship_name' => 'aow_conditions_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4657,7 +3536,7 @@
   ),
   'aow_conditions_created_by' => 
   array (
-    'id' => '815174ad-0bc6-e8f1-0231-52c07cc3c6ea',
+    'id' => '6297fffa-4403-58bd-f048-52c0bded898c',
     'relationship_name' => 'aow_conditions_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4674,9 +3553,28 @@
     'reverse' => '0',
     'deleted' => '0',
   ),
+  'projects_created_by' => 
+  array (
+    'id' => '643c0dea-970c-0d4c-3e7a-52c0bd0c645d',
+    'relationship_name' => 'projects_created_by',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Project',
+    'rhs_table' => 'project',
+    'rhs_key' => 'created_by',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
   'jjwg_maps_modified_user' => 
   array (
-    'id' => '82fd46c3-e5cb-2d9c-3efc-52c07c2fb68e',
+    'id' => '65ed9f56-69ec-8c9e-28d6-52c0bd6cee95',
     'relationship_name' => 'jjwg_maps_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4695,7 +3593,7 @@
   ),
   'jjwg_maps_created_by' => 
   array (
-    'id' => '832b86e3-e194-a41a-c529-52c07c726457',
+    'id' => '6620b585-4c0f-a270-44b3-52c0bd23f662',
     'relationship_name' => 'jjwg_maps_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4714,7 +3612,7 @@
   ),
   'jjwg_maps_assigned_user' => 
   array (
-    'id' => '836b23e0-79ab-b8ef-506e-52c07c61a488',
+    'id' => '666e73ec-b08c-407a-230c-52c0bde18b98',
     'relationship_name' => 'jjwg_maps_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4733,7 +3631,7 @@
   ),
   'jjwg_markers_modified_user' => 
   array (
-    'id' => '85200bed-2b1f-21e2-33ac-52c07c2578ec',
+    'id' => '6967ed03-738f-516f-79a0-52c0bd61d5af',
     'relationship_name' => 'jjwg_markers_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4752,7 +3650,7 @@
   ),
   'jjwg_markers_created_by' => 
   array (
-    'id' => '854a504d-5803-35dc-d584-52c07c927036',
+    'id' => '69a5cd4f-9bed-2388-8275-52c0bd34db4a',
     'relationship_name' => 'jjwg_markers_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4771,7 +3669,7 @@
   ),
   'jjwg_markers_assigned_user' => 
   array (
-    'id' => '85711f68-c893-383b-1fd0-52c07ce8c493',
+    'id' => '69da16a2-72bc-6690-77d1-52c0bd1de5ca',
     'relationship_name' => 'jjwg_markers_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4790,7 +3688,7 @@
   ),
   'jjwg_areas_modified_user' => 
   array (
-    'id' => '875a1f48-4a5a-2055-71a8-52c07c103cd6',
+    'id' => '6ccfe7ef-3921-2f76-7f56-52c0bddcf4f7',
     'relationship_name' => 'jjwg_areas_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4809,7 +3707,7 @@
   ),
   'jjwg_areas_created_by' => 
   array (
-    'id' => '87816749-7e3c-96b3-13de-52c07c3f572d',
+    'id' => '6d02c165-d7ea-36dc-0ca0-52c0bd19007a',
     'relationship_name' => 'jjwg_areas_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4828,7 +3726,7 @@
   ),
   'jjwg_areas_assigned_user' => 
   array (
-    'id' => '87b01745-fa25-a4b1-aacb-52c07ccf3020',
+    'id' => '6d2f6631-d119-4314-7976-52c0bd5a0f69',
     'relationship_name' => 'jjwg_areas_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4847,7 +3745,7 @@
   ),
   'jjwg_address_cache_modified_user' => 
   array (
-    'id' => '898801e3-c5ee-3398-6293-52c07cf7527d',
+    'id' => '6ffc1081-1394-9583-e9a4-52c0bd608f57',
     'relationship_name' => 'jjwg_address_cache_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4866,7 +3764,7 @@
   ),
   'jjwg_address_cache_created_by' => 
   array (
-    'id' => '89b32d31-ac1d-6920-57d6-52c07ced113b',
+    'id' => '7038b714-5f79-4f9d-9e2a-52c0bddda20a',
     'relationship_name' => 'jjwg_address_cache_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4885,7 +3783,7 @@
   ),
   'jjwg_address_cache_assigned_user' => 
   array (
-    'id' => '89d444c9-1c60-2dea-2aa1-52c07c30820c',
+    'id' => '707b2fb7-1fc6-e0c3-6cad-52c0bd8cc2a0',
     'relationship_name' => 'jjwg_address_cache_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4904,7 +3802,7 @@
   ),
   'calls_reschedule_modified_user' => 
   array (
-    'id' => '8a289d61-4d18-3484-206a-52c07c513717',
+    'id' => '719e4254-e996-282b-0d21-52c0bdbf2855',
     'relationship_name' => 'calls_reschedule_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4923,7 +3821,7 @@
   ),
   'calls_reschedule_created_by' => 
   array (
-    'id' => '8a535553-57a6-eca4-2879-52c07ce4960a',
+    'id' => '71ccf84c-fbd3-784f-df99-52c0bdc9faf2',
     'relationship_name' => 'calls_reschedule_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4942,7 +3840,7 @@
   ),
   'calls_reschedule_assigned_user' => 
   array (
-    'id' => '8a7d3d5d-38de-0413-4aae-52c07c2735cb',
+    'id' => '71f6cd7c-bab3-62c2-eb48-52c0bd38f1dd',
     'relationship_name' => 'calls_reschedule_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4961,7 +3859,7 @@
   ),
   'securitygroups_modified_user' => 
   array (
-    'id' => '8ad4db34-a9dc-a98e-dc80-52c07ca7a570',
+    'id' => '7342c660-eaef-fdfc-21e1-52c0bd10490b',
     'relationship_name' => 'securitygroups_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4980,7 +3878,7 @@
   ),
   'securitygroups_created_by' => 
   array (
-    'id' => '8b001c1e-28ef-ce77-4f6f-52c07c0db526',
+    'id' => '736e1ee8-eaeb-6e99-025a-52c0bd2b393a',
     'relationship_name' => 'securitygroups_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -4999,7 +3897,7 @@
   ),
   'securitygroups_assigned_user' => 
   array (
-    'id' => '8b27cc1b-5929-6753-4e71-52c07c83b8ff',
+    'id' => '739ab507-538f-759d-cb0c-52c0bd1906e6',
     'relationship_name' => 'securitygroups_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -5018,7 +3916,7 @@
   ),
   'zr2_report_modified_user' => 
   array (
-    'id' => '8b8446cd-7772-128e-176c-52c07c26edde',
+    'id' => '7443c759-dbeb-a0cd-6153-52c0bdc03b90',
     'relationship_name' => 'zr2_report_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -5037,7 +3935,7 @@
   ),
   'zr2_report_created_by' => 
   array (
-    'id' => '8baca5aa-8549-cfee-8c0e-52c07c120c8f',
+    'id' => '7471c36b-4935-7d74-8b0e-52c0bd0dcc2d',
     'relationship_name' => 'zr2_report_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -5056,7 +3954,7 @@
   ),
   'zr2_report_assigned_user' => 
   array (
-    'id' => '8bd1377c-e4c6-0ad7-728b-52c07c4e35d8',
+    'id' => '749894c8-15ea-fd16-8fd2-52c0bd0cf0bc',
     'relationship_name' => 'zr2_report_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -5075,7 +3973,7 @@
   ),
   'zr2_reportcontainer_modified_user' => 
   array (
-    'id' => '8c22b4d1-7916-6e06-b805-52c07cac953a',
+    'id' => '758c4540-f5a5-c142-aba5-52c0bd1adb7c',
     'relationship_name' => 'zr2_reportcontainer_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -5094,7 +3992,7 @@
   ),
   'zr2_reportcontainer_created_by' => 
   array (
-    'id' => '8c4f6c7f-68f6-f386-cab1-52c07c8055dc',
+    'id' => '75c17fc5-aa2d-ff6d-9cf9-52c0bd69bde1',
     'relationship_name' => 'zr2_reportcontainer_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -5113,7 +4011,7 @@
   ),
   'zr2_reportcontainer_assigned_user' => 
   array (
-    'id' => '8c763c50-a98f-2bbd-db51-52c07ce51393',
+    'id' => '75eb1092-f075-d436-f1cb-52c0bd27d316',
     'relationship_name' => 'zr2_reportcontainer_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -5132,7 +4030,7 @@
   ),
   'zr2_reportparameter_modified_user' => 
   array (
-    'id' => '8cc740d2-e631-5fe9-9d57-52c07c2a95ad',
+    'id' => '7726ce64-73ce-2e60-9754-52c0bd99b8f3',
     'relationship_name' => 'zr2_reportparameter_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -5151,7 +4049,7 @@
   ),
   'zr2_reportparameter_created_by' => 
   array (
-    'id' => '8cf1d8ed-000e-93cb-622c-52c07cecbbdd',
+    'id' => '7755ab6c-c172-6f09-3338-52c0bd3b5a09',
     'relationship_name' => 'zr2_reportparameter_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -5170,7 +4068,7 @@
   ),
   'zr2_reportparameter_assigned_user' => 
   array (
-    'id' => '8d15aa78-c2c1-c9c5-1827-52c07c241c65',
+    'id' => '777af36d-ccdf-9b8f-570d-52c0bd421cc2',
     'relationship_name' => 'zr2_reportparameter_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -5189,7 +4087,7 @@
   ),
   'zr2_reportparameterlink_modified_user' => 
   array (
-    'id' => '8d669b48-89b3-ab4c-3860-52c07c979060',
+    'id' => '78b57dec-a5d6-472f-0a4f-52c0bd6a5a1a',
     'relationship_name' => 'zr2_reportparameterlink_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -5208,7 +4106,7 @@
   ),
   'zr2_reportparameterlink_created_by' => 
   array (
-    'id' => '8d9d9372-a480-4dc7-0f42-52c07caab2ac',
+    'id' => '78ee0cea-4497-0302-8d24-52c0bd0b4705',
     'relationship_name' => 'zr2_reportparameterlink_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -5227,7 +4125,7 @@
   ),
   'zr2_reportparameterlink_assigned_user' => 
   array (
-    'id' => '8dc02787-7dfd-2c2d-7143-52c07cb0fbe7',
+    'id' => '7914d163-9751-3ade-e894-52c0bdc610f9',
     'relationship_name' => 'zr2_reportparameterlink_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -5246,7 +4144,7 @@
   ),
   'zr2_reporttemplate_modified_user' => 
   array (
-    'id' => '8e2f9d34-9a33-82c9-fa8d-52c07cc4c4c1',
+    'id' => '7a7e348e-92a6-b66b-f8f9-52c0bdd7b4d2',
     'relationship_name' => 'zr2_reporttemplate_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -5265,7 +4163,7 @@
   ),
   'zr2_reporttemplate_created_by' => 
   array (
-    'id' => '8e59d762-ab84-d024-fd67-52c07cf30dd3',
+    'id' => '7aaccdeb-f99d-28bc-0c27-52c0bd36fd7d',
     'relationship_name' => 'zr2_reporttemplate_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -5284,7 +4182,7 @@
   ),
   'zr2_reporttemplate_assigned_user' => 
   array (
-    'id' => '8e7e735d-15da-dfa7-fc77-52c07ce2f54c',
+    'id' => '7ad4f7fd-2510-95ca-af6d-52c0bdaf4a2e',
     'relationship_name' => 'zr2_reporttemplate_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -5301,9 +4199,28 @@
     'reverse' => '0',
     'deleted' => '0',
   ),
+  'project_tasks_notes' => 
+  array (
+    'id' => '7b950e8e-597b-e8ca-5955-52c0bdac5b0a',
+    'relationship_name' => 'project_tasks_notes',
+    'lhs_module' => 'ProjectTask',
+    'lhs_table' => 'project_task',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Notes',
+    'rhs_table' => 'notes',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'ProjectTask',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
   'zr2_querytemplate_modified_user' => 
   array (
-    'id' => '8ed1c8d7-0c15-b634-75cc-52c07c257d38',
+    'id' => '7c1d0598-5bb3-df31-0e8d-52c0bd217e24',
     'relationship_name' => 'zr2_querytemplate_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -5322,7 +4239,7 @@
   ),
   'zr2_querytemplate_created_by' => 
   array (
-    'id' => '8f0134e0-88b1-65ad-8e22-52c07cbe1b84',
+    'id' => '7c4c5421-1200-137c-fdd1-52c0bd65de80',
     'relationship_name' => 'zr2_querytemplate_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -5341,7 +4258,7 @@
   ),
   'zr2_querytemplate_assigned_user' => 
   array (
-    'id' => '8f2c1f6f-19fe-5a6f-b63d-52c07c0cbc04',
+    'id' => '7c780443-d82f-e420-d65c-52c0bd7adece',
     'relationship_name' => 'zr2_querytemplate_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -5358,9 +4275,161 @@
     'reverse' => '0',
     'deleted' => '0',
   ),
+  'project_tasks_tasks' => 
+  array (
+    'id' => '7e87044e-7cb0-2d83-d055-52c0bdb90ac0',
+    'relationship_name' => 'project_tasks_tasks',
+    'lhs_module' => 'ProjectTask',
+    'lhs_table' => 'project_task',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Tasks',
+    'rhs_table' => 'tasks',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'ProjectTask',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'project_tasks_meetings' => 
+  array (
+    'id' => '80eb0701-c444-9912-c83e-52c0bdf55f0a',
+    'relationship_name' => 'project_tasks_meetings',
+    'lhs_module' => 'ProjectTask',
+    'lhs_table' => 'project_task',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Meetings',
+    'rhs_table' => 'meetings',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'ProjectTask',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'project_tasks_calls' => 
+  array (
+    'id' => '831e0964-b19e-5577-b5d5-52c0bdd31e9e',
+    'relationship_name' => 'project_tasks_calls',
+    'lhs_module' => 'ProjectTask',
+    'lhs_table' => 'project_task',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Calls',
+    'rhs_table' => 'calls',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'ProjectTask',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'bug_calls' => 
+  array (
+    'id' => '85300ef0-bacb-15a1-0822-52c0bd479708',
+    'relationship_name' => 'bug_calls',
+    'lhs_module' => 'Bugs',
+    'lhs_table' => 'bugs',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Calls',
+    'rhs_table' => 'calls',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Bugs',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'project_tasks_emails' => 
+  array (
+    'id' => '85460a5e-d41e-05a9-7491-52c0bd3e33a4',
+    'relationship_name' => 'project_tasks_emails',
+    'lhs_module' => 'ProjectTask',
+    'lhs_table' => 'project_task',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Emails',
+    'rhs_table' => 'emails',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'ProjectTask',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'project_tasks_assigned_user' => 
+  array (
+    'id' => '8769092e-347f-4541-dfee-52c0bdc82f0b',
+    'relationship_name' => 'project_tasks_assigned_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'ProjectTask',
+    'rhs_table' => 'project_task',
+    'rhs_key' => 'assigned_user_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'project_tasks_modified_user' => 
+  array (
+    'id' => '898a00d8-f738-6444-06ab-52c0bda3ad73',
+    'relationship_name' => 'project_tasks_modified_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'ProjectTask',
+    'rhs_table' => 'project_task',
+    'rhs_key' => 'modified_user_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'project_tasks_created_by' => 
+  array (
+    'id' => '8ba603dd-710d-0a50-6c81-52c0bd945b37',
+    'relationship_name' => 'project_tasks_created_by',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'ProjectTask',
+    'rhs_table' => 'project_task',
+    'rhs_key' => 'created_by',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
   'accounts_bugs' => 
   array (
-    'id' => 'a06b1520-d5d3-2b13-ea41-52c07cb764cd',
+    'id' => '926be78c-c3ef-7f5f-ac27-52c0bd34ffdf',
     'relationship_name' => 'accounts_bugs',
     'lhs_module' => 'Accounts',
     'lhs_table' => 'accounts',
@@ -5379,7 +4448,7 @@
   ),
   'accounts_contacts' => 
   array (
-    'id' => 'a0a70494-028c-66c0-9e98-52c07c4ef186',
+    'id' => '92a165fc-b4c5-d91c-8f8c-52c0bdbaff16',
     'relationship_name' => 'accounts_contacts',
     'lhs_module' => 'Accounts',
     'lhs_table' => 'accounts',
@@ -5398,7 +4467,7 @@
   ),
   'accounts_opportunities' => 
   array (
-    'id' => 'a0dc7a36-8837-c458-f514-52c07c3432ea',
+    'id' => '92d79d5c-e064-ccf8-be0d-52c0bdc1cdfb',
     'relationship_name' => 'accounts_opportunities',
     'lhs_module' => 'Accounts',
     'lhs_table' => 'accounts',
@@ -5417,7 +4486,7 @@
   ),
   'calls_contacts' => 
   array (
-    'id' => 'a103d108-f93d-de4c-4616-52c07c6cfcd0',
+    'id' => '9302106d-2964-157b-a231-52c0bdcc50fe',
     'relationship_name' => 'calls_contacts',
     'lhs_module' => 'Calls',
     'lhs_table' => 'calls',
@@ -5436,7 +4505,7 @@
   ),
   'calls_users' => 
   array (
-    'id' => 'a129b5ab-fc7d-d096-ef54-52c07c61e22c',
+    'id' => '9329557d-1c90-464f-0eb3-52c0bd0efd61',
     'relationship_name' => 'calls_users',
     'lhs_module' => 'Calls',
     'lhs_table' => 'calls',
@@ -5455,7 +4524,7 @@
   ),
   'calls_leads' => 
   array (
-    'id' => 'a14f0619-54f1-9d51-f821-52c07cda3de2',
+    'id' => '934fa715-be2c-778e-cf5c-52c0bd578059',
     'relationship_name' => 'calls_leads',
     'lhs_module' => 'Calls',
     'lhs_table' => 'calls',
@@ -5474,7 +4543,7 @@
   ),
   'cases_bugs' => 
   array (
-    'id' => 'a173e90d-a0fc-698f-9e6c-52c07c89afb0',
+    'id' => '93750007-360f-af9e-697c-52c0bdd63ab6',
     'relationship_name' => 'cases_bugs',
     'lhs_module' => 'Cases',
     'lhs_table' => 'cases',
@@ -5493,7 +4562,7 @@
   ),
   'contacts_bugs' => 
   array (
-    'id' => 'a19983fd-8163-cdc9-8945-52c07c36c3b0',
+    'id' => '939bd3e6-fa27-3f04-c0fc-52c0bd3cbcd5',
     'relationship_name' => 'contacts_bugs',
     'lhs_module' => 'Contacts',
     'lhs_table' => 'contacts',
@@ -5512,7 +4581,7 @@
   ),
   'contacts_cases' => 
   array (
-    'id' => 'a1bed2a8-8e1e-7be2-58a8-52c07c3fa011',
+    'id' => '93c1bfa5-342b-a23c-cb8e-52c0bdce613a',
     'relationship_name' => 'contacts_cases',
     'lhs_module' => 'Contacts',
     'lhs_table' => 'contacts',
@@ -5531,7 +4600,7 @@
   ),
   'contacts_users' => 
   array (
-    'id' => 'a1e41dbf-0dc2-ceda-31e4-52c07c8084f6',
+    'id' => '93e70f4c-3a09-b16e-d44c-52c0bdb931ce',
     'relationship_name' => 'contacts_users',
     'lhs_module' => 'Contacts',
     'lhs_table' => 'contacts',
@@ -5550,7 +4619,7 @@
   ),
   'emails_bugs_rel' => 
   array (
-    'id' => 'a215ecfe-8e7c-4a03-3cf5-52c07c861ed7',
+    'id' => '941b3749-f559-7d4f-f81f-52c0bda521b9',
     'relationship_name' => 'emails_bugs_rel',
     'lhs_module' => 'Emails',
     'lhs_table' => 'emails',
@@ -5569,7 +4638,7 @@
   ),
   'emails_cases_rel' => 
   array (
-    'id' => 'a239898b-a4f5-c255-4d39-52c07c51ee19',
+    'id' => '9441b1c0-5309-045c-e386-52c0bdb2ae36',
     'relationship_name' => 'emails_cases_rel',
     'lhs_module' => 'Emails',
     'lhs_table' => 'emails',
@@ -5588,7 +4657,7 @@
   ),
   'emails_opportunities_rel' => 
   array (
-    'id' => 'a27790aa-c354-f9e7-b839-52c07c787f72',
+    'id' => '94870d9d-5627-0526-70dc-52c0bdde446d',
     'relationship_name' => 'emails_opportunities_rel',
     'lhs_module' => 'Emails',
     'lhs_table' => 'emails',
@@ -5607,7 +4676,7 @@
   ),
   'emails_tasks_rel' => 
   array (
-    'id' => 'a299de05-3dfa-1378-72e0-52c07cdc2604',
+    'id' => '94ad8174-cebd-6483-2718-52c0bdbffae3',
     'relationship_name' => 'emails_tasks_rel',
     'lhs_module' => 'Emails',
     'lhs_table' => 'emails',
@@ -5626,7 +4695,7 @@
   ),
   'emails_users_rel' => 
   array (
-    'id' => 'a2b980b7-f5c4-9581-6dbe-52c07c2728e9',
+    'id' => '94d0c955-cf9e-982c-ce7c-52c0bd266dda',
     'relationship_name' => 'emails_users_rel',
     'lhs_module' => 'Emails',
     'lhs_table' => 'emails',
@@ -5645,7 +4714,7 @@
   ),
   'emails_project_task_rel' => 
   array (
-    'id' => 'a2dc368f-f8e9-d916-6700-52c07c326f20',
+    'id' => '94f3c46d-41b2-92d8-ae27-52c0bdd27628',
     'relationship_name' => 'emails_project_task_rel',
     'lhs_module' => 'Emails',
     'lhs_table' => 'emails',
@@ -5664,7 +4733,7 @@
   ),
   'emails_projects_rel' => 
   array (
-    'id' => 'a2fed84c-56bb-bbdd-d0b8-52c07c780a2e',
+    'id' => '95175a0e-bdcb-5e4b-78e6-52c0bdbe7b14',
     'relationship_name' => 'emails_projects_rel',
     'lhs_module' => 'Emails',
     'lhs_table' => 'emails',
@@ -5683,7 +4752,7 @@
   ),
   'emails_prospects_rel' => 
   array (
-    'id' => 'a3372a6b-9b96-9d45-d471-52c07ca4608e',
+    'id' => '953d0817-3964-96a5-dd80-52c0bdf21cd5',
     'relationship_name' => 'emails_prospects_rel',
     'lhs_module' => 'Emails',
     'lhs_table' => 'emails',
@@ -5702,7 +4771,7 @@
   ),
   'meetings_contacts' => 
   array (
-    'id' => 'a35f34ac-b8b3-9da6-7aca-52c07c273e62',
+    'id' => '9564057c-3e49-1b0c-d5fa-52c0bd518237',
     'relationship_name' => 'meetings_contacts',
     'lhs_module' => 'Meetings',
     'lhs_table' => 'meetings',
@@ -5721,7 +4790,7 @@
   ),
   'meetings_users' => 
   array (
-    'id' => 'a383fbdf-2243-3804-4bed-52c07c5ee517',
+    'id' => '9588c783-e019-da72-f9f6-52c0bdd04b35',
     'relationship_name' => 'meetings_users',
     'lhs_module' => 'Meetings',
     'lhs_table' => 'meetings',
@@ -5740,7 +4809,7 @@
   ),
   'meetings_leads' => 
   array (
-    'id' => 'a3a8ff4e-cc7a-d76a-b3f8-52c07ce096ce',
+    'id' => '95acde63-e3ef-7c91-9def-52c0bd692466',
     'relationship_name' => 'meetings_leads',
     'lhs_module' => 'Meetings',
     'lhs_table' => 'meetings',
@@ -5759,7 +4828,7 @@
   ),
   'opportunities_contacts' => 
   array (
-    'id' => 'a3cdec40-3691-01ab-e578-52c07c409996',
+    'id' => '95d0b4bb-2504-ce5a-fdfe-52c0bd722cf6',
     'relationship_name' => 'opportunities_contacts',
     'lhs_module' => 'Opportunities',
     'lhs_table' => 'opportunities',
@@ -5778,7 +4847,7 @@
   ),
   'prospect_list_campaigns' => 
   array (
-    'id' => 'a3fcbb9f-c36a-1a76-3c74-52c07c5fbee5',
+    'id' => '95fdee12-f9cb-fcc2-7eec-52c0bda7da6d',
     'relationship_name' => 'prospect_list_campaigns',
     'lhs_module' => 'ProspectLists',
     'lhs_table' => 'prospect_lists',
@@ -5797,7 +4866,7 @@
   ),
   'prospect_list_contacts' => 
   array (
-    'id' => 'a41fd052-ae95-0929-a8d7-52c07cd57dec',
+    'id' => '962225b9-65f5-23a2-8a41-52c0bd068ea9',
     'relationship_name' => 'prospect_list_contacts',
     'lhs_module' => 'ProspectLists',
     'lhs_table' => 'prospect_lists',
@@ -5816,7 +4885,7 @@
   ),
   'prospect_list_prospects' => 
   array (
-    'id' => 'a43f5a01-99f6-0502-e784-52c07cf74f6e',
+    'id' => '9643d6d3-dd95-1cbc-76e0-52c0bd46d707',
     'relationship_name' => 'prospect_list_prospects',
     'lhs_module' => 'ProspectLists',
     'lhs_table' => 'prospect_lists',
@@ -5835,7 +4904,7 @@
   ),
   'prospect_list_leads' => 
   array (
-    'id' => 'a46133a0-0aa3-b56f-af78-52c07c4794a5',
+    'id' => '96666a40-eb9e-b879-f971-52c0bdd497f8',
     'relationship_name' => 'prospect_list_leads',
     'lhs_module' => 'ProspectLists',
     'lhs_table' => 'prospect_lists',
@@ -5854,7 +4923,7 @@
   ),
   'prospect_list_users' => 
   array (
-    'id' => 'a485c43c-8b5c-3cd9-8a0f-52c07c4b93ea',
+    'id' => '9689047b-bd04-d556-98c0-52c0bdc6536a',
     'relationship_name' => 'prospect_list_users',
     'lhs_module' => 'ProspectLists',
     'lhs_table' => 'prospect_lists',
@@ -5873,7 +4942,7 @@
   ),
   'prospect_list_accounts' => 
   array (
-    'id' => 'a4a6e89e-0e2b-4b40-1c36-52c07cf3613f',
+    'id' => '96ab79a4-68b6-232f-4aad-52c0bd8e988b',
     'relationship_name' => 'prospect_list_accounts',
     'lhs_module' => 'ProspectLists',
     'lhs_table' => 'prospect_lists',
@@ -5892,7 +4961,7 @@
   ),
   'roles_users' => 
   array (
-    'id' => 'a4c97ed3-a036-cc6c-62b8-52c07ca58c0c',
+    'id' => '96cfac65-dfd6-f5de-7026-52c0bd3c1c8e',
     'relationship_name' => 'roles_users',
     'lhs_module' => 'Roles',
     'lhs_table' => 'roles',
@@ -5911,7 +4980,7 @@
   ),
   'projects_bugs' => 
   array (
-    'id' => 'a4ecddcf-7886-7b57-5c2a-52c07cf98059',
+    'id' => '96f45987-2cc8-1b90-d09d-52c0bd5a12f8',
     'relationship_name' => 'projects_bugs',
     'lhs_module' => 'Project',
     'lhs_table' => 'project',
@@ -5930,7 +4999,7 @@
   ),
   'projects_cases' => 
   array (
-    'id' => 'a50e676c-bc5e-9f51-1804-52c07c45e50a',
+    'id' => '971795cf-7669-d114-5cd2-52c0bd93050c',
     'relationship_name' => 'projects_cases',
     'lhs_module' => 'Project',
     'lhs_table' => 'project',
@@ -5949,7 +5018,7 @@
   ),
   'projects_accounts' => 
   array (
-    'id' => 'a53cd72a-e285-d7fe-a429-52c07c0ab1dc',
+    'id' => '973da8a6-808b-8389-195a-52c0bd49020f',
     'relationship_name' => 'projects_accounts',
     'lhs_module' => 'Project',
     'lhs_table' => 'project',
@@ -5968,7 +5037,7 @@
   ),
   'projects_contacts' => 
   array (
-    'id' => 'a55f807a-3988-e380-ae05-52c07cc26b6c',
+    'id' => '976a6d18-3822-d1a1-b320-52c0bdeec9ce',
     'relationship_name' => 'projects_contacts',
     'lhs_module' => 'Project',
     'lhs_table' => 'project',
@@ -5987,7 +5056,7 @@
   ),
   'projects_opportunities' => 
   array (
-    'id' => 'a582eb95-5229-ce03-1e99-52c07cc24b7d',
+    'id' => '978eec55-e65c-6977-2654-52c0bd31f725',
     'relationship_name' => 'projects_opportunities',
     'lhs_module' => 'Project',
     'lhs_table' => 'project',
@@ -6006,7 +5075,7 @@
   ),
   'acl_roles_actions' => 
   array (
-    'id' => 'a5a85f38-3376-f382-c0d9-52c07cf17f61',
+    'id' => '97b308f4-a392-e15a-b518-52c0bd7f2e62',
     'relationship_name' => 'acl_roles_actions',
     'lhs_module' => 'ACLRoles',
     'lhs_table' => 'acl_roles',
@@ -6025,7 +5094,7 @@
   ),
   'acl_roles_users' => 
   array (
-    'id' => 'a5d02f7d-2b9a-73e4-3226-52c07c7c0e0b',
+    'id' => '97d6c78e-648f-1ddc-b4c2-52c0bd60dd88',
     'relationship_name' => 'acl_roles_users',
     'lhs_module' => 'ACLRoles',
     'lhs_table' => 'acl_roles',
@@ -6044,7 +5113,7 @@
   ),
   'email_marketing_prospect_lists' => 
   array (
-    'id' => 'a5fae082-4445-11ad-8bc8-52c07c0c2a27',
+    'id' => '98017f77-caf9-c3e3-e83f-52c0bd88c705',
     'relationship_name' => 'email_marketing_prospect_lists',
     'lhs_module' => 'EmailMarketing',
     'lhs_table' => 'email_marketing',
@@ -6063,7 +5132,7 @@
   ),
   'leads_documents' => 
   array (
-    'id' => 'a61ef814-6b65-c98e-1f7a-52c07ca28eac',
+    'id' => '98264432-a9a0-85ef-4325-52c0bdfcc65f',
     'relationship_name' => 'leads_documents',
     'lhs_module' => 'Leads',
     'lhs_table' => 'leads',
@@ -6082,7 +5151,7 @@
   ),
   'documents_accounts' => 
   array (
-    'id' => 'a64b9dc3-6b95-05b3-61f1-52c07c46199c',
+    'id' => '984ac8c6-86e9-1b92-56b3-52c0bd52266e',
     'relationship_name' => 'documents_accounts',
     'lhs_module' => 'Documents',
     'lhs_table' => 'documents',
@@ -6101,7 +5170,7 @@
   ),
   'documents_contacts' => 
   array (
-    'id' => 'a66f0b87-42dc-4569-3540-52c07caa3bc2',
+    'id' => '986f439c-6a12-c878-e9a2-52c0bd53ef94',
     'relationship_name' => 'documents_contacts',
     'lhs_module' => 'Documents',
     'lhs_table' => 'documents',
@@ -6120,7 +5189,7 @@
   ),
   'documents_opportunities' => 
   array (
-    'id' => 'a68eb7e3-d4fd-ee28-893c-52c07c237118',
+    'id' => '98937e98-f7ea-b8bc-ef87-52c0bdf38c65',
     'relationship_name' => 'documents_opportunities',
     'lhs_module' => 'Documents',
     'lhs_table' => 'documents',
@@ -6139,7 +5208,7 @@
   ),
   'documents_cases' => 
   array (
-    'id' => 'a6bc89db-ad45-9948-f355-52c07c9960cd',
+    'id' => '98c0761a-8be6-5b49-343d-52c0bd79821e',
     'relationship_name' => 'documents_cases',
     'lhs_module' => 'Documents',
     'lhs_table' => 'documents',
@@ -6158,7 +5227,7 @@
   ),
   'documents_bugs' => 
   array (
-    'id' => 'a6dfd0ca-b325-8abc-f14e-52c07c43040d',
+    'id' => '98e47e87-482e-8093-bbce-52c0bdafc33c',
     'relationship_name' => 'documents_bugs',
     'lhs_module' => 'Documents',
     'lhs_table' => 'documents',
@@ -6177,7 +5246,7 @@
   ),
   'aos_contracts_documents' => 
   array (
-    'id' => 'a702f300-aab1-b4bf-56c6-52c07c66e597',
+    'id' => '99095640-5a96-ec50-aa33-52c0bdaa984e',
     'relationship_name' => 'aos_contracts_documents',
     'lhs_module' => 'AOS_Contracts',
     'lhs_table' => 'aos_contracts',
@@ -6196,7 +5265,7 @@
   ),
   'aos_quotes_aos_contracts' => 
   array (
-    'id' => 'a726f8f6-007e-0cc1-e1f9-52c07c10c46c',
+    'id' => '994511cd-ccc0-d051-7f63-52c0bd2b37c9',
     'relationship_name' => 'aos_quotes_aos_contracts',
     'lhs_module' => 'AOS_Quotes',
     'lhs_table' => 'aos_quotes',
@@ -6215,7 +5284,7 @@
   ),
   'aos_quotes_aos_invoices' => 
   array (
-    'id' => 'a7496e22-78dd-0584-e270-52c07c425852',
+    'id' => '996a1007-4963-3121-8f47-52c0bd570ac0',
     'relationship_name' => 'aos_quotes_aos_invoices',
     'lhs_module' => 'AOS_Quotes',
     'lhs_table' => 'aos_quotes',
@@ -6234,7 +5303,7 @@
   ),
   'aos_quotes_project' => 
   array (
-    'id' => 'a76c90f2-c90d-51c6-f65c-52c07c35c9d1',
+    'id' => '998e6d7c-6d3d-6ff6-8a97-52c0bd53ffd9',
     'relationship_name' => 'aos_quotes_project',
     'lhs_module' => 'AOS_Quotes',
     'lhs_table' => 'aos_quotes',
@@ -6253,7 +5322,7 @@
   ),
   'aow_processed_aow_actions' => 
   array (
-    'id' => 'a79121af-cf17-73c6-4d39-52c07ca4bf91',
+    'id' => '99b264b8-433f-029b-a7ab-52c0bd94d1f6',
     'relationship_name' => 'aow_processed_aow_actions',
     'lhs_module' => 'AOW_Processed',
     'lhs_table' => 'aow_processed',
@@ -6272,7 +5341,7 @@
   ),
   'fp_event_locations_fp_events_1' => 
   array (
-    'id' => 'a7b4402a-a204-6255-8169-52c07c8e3890',
+    'id' => '99d65a1c-b572-7696-e9b7-52c0bdc25fea',
     'relationship_name' => 'fp_event_locations_fp_events_1',
     'lhs_module' => 'FP_Event_Locations',
     'lhs_table' => 'fp_event_locations',
@@ -6291,7 +5360,7 @@
   ),
   'fp_events_contacts' => 
   array (
-    'id' => 'a7da9b87-6998-0d61-4f3c-52c07c0d3ca8',
+    'id' => '99ff5b59-8144-154c-d9ad-52c0bdac4c3b',
     'relationship_name' => 'fp_events_contacts',
     'lhs_module' => 'FP_events',
     'lhs_table' => 'fp_events',
@@ -6310,7 +5379,7 @@
   ),
   'fp_events_fp_event_locations_1' => 
   array (
-    'id' => 'a8097c31-a70c-2028-6e85-52c07c8d7fde',
+    'id' => '9a25935f-d182-a566-bbff-52c0bdda98b8',
     'relationship_name' => 'fp_events_fp_event_locations_1',
     'lhs_module' => 'FP_events',
     'lhs_table' => 'fp_events',
@@ -6329,7 +5398,7 @@
   ),
   'fp_events_leads_1' => 
   array (
-    'id' => 'a82cbec2-1a30-2ed0-267c-52c07c616000',
+    'id' => '9a52d084-9bd4-7158-0b56-52c0bdca21de',
     'relationship_name' => 'fp_events_leads_1',
     'lhs_module' => 'FP_events',
     'lhs_table' => 'fp_events',
@@ -6348,7 +5417,7 @@
   ),
   'fp_events_prospects_1' => 
   array (
-    'id' => 'a84d6beb-e9fe-bf5d-d492-52c07cebb074',
+    'id' => '9a76c827-355a-9b35-08fc-52c0bd347fa4',
     'relationship_name' => 'fp_events_prospects_1',
     'lhs_module' => 'FP_events',
     'lhs_table' => 'fp_events',
@@ -6367,7 +5436,7 @@
   ),
   'jjwg_maps_jjwg_areas' => 
   array (
-    'id' => 'a8709b84-f465-e932-46e2-52c07c3e62b5',
+    'id' => '9a9e57f6-6943-ac5e-45e7-52c0bd9d6b17',
     'relationship_name' => 'jjwg_maps_jjwg_areas',
     'lhs_module' => 'jjwg_Maps',
     'lhs_table' => 'jjwg_maps',
@@ -6386,7 +5455,7 @@
   ),
   'jjwg_maps_jjwg_markers' => 
   array (
-    'id' => 'a8b2b59a-a20c-94e3-4e4a-52c07c87efc5',
+    'id' => '9ac5bf2d-dc07-37f1-1c86-52c0bd7d31f4',
     'relationship_name' => 'jjwg_maps_jjwg_markers',
     'lhs_module' => 'jjwg_Maps',
     'lhs_table' => 'jjwg_maps',
@@ -6405,7 +5474,7 @@
   ),
   'securitygroups_acl_roles' => 
   array (
-    'id' => 'a8db7f47-a9ff-ade4-3dd2-52c07c2b019e',
+    'id' => '9ae9a95b-e931-2f07-60e4-52c0bd8c8941',
     'relationship_name' => 'securitygroups_acl_roles',
     'lhs_module' => 'SecurityGroups',
     'lhs_table' => 'securitygroups',
@@ -6424,7 +5493,7 @@
   ),
   'securitygroups_accounts' => 
   array (
-    'id' => 'a9026b6f-15ba-d0ec-4d3d-52c07c02b1e8',
+    'id' => '9b1049e5-c601-c827-fca0-52c0bd976a23',
     'relationship_name' => 'securitygroups_accounts',
     'lhs_module' => 'SecurityGroups',
     'lhs_table' => 'securitygroups',
@@ -6443,7 +5512,7 @@
   ),
   'securitygroups_bugs' => 
   array (
-    'id' => 'a92541b4-0519-7862-ed2e-52c07c880a0e',
+    'id' => '9b32e4b6-c4b2-9c8f-6772-52c0bdd46ff7',
     'relationship_name' => 'securitygroups_bugs',
     'lhs_module' => 'SecurityGroups',
     'lhs_table' => 'securitygroups',
@@ -6462,7 +5531,7 @@
   ),
   'securitygroups_calls' => 
   array (
-    'id' => 'a951485b-0667-5eba-a5f2-52c07c6051e0',
+    'id' => '9b558be3-f4d5-469f-a49a-52c0bd7c04ae',
     'relationship_name' => 'securitygroups_calls',
     'lhs_module' => 'SecurityGroups',
     'lhs_table' => 'securitygroups',
@@ -6481,7 +5550,7 @@
   ),
   'securitygroups_campaigns' => 
   array (
-    'id' => 'a9732bb9-691a-9a6b-bfb3-52c07c2bbc61',
+    'id' => '9b780fa6-7601-87a4-3e4f-52c0bd6fdf61',
     'relationship_name' => 'securitygroups_campaigns',
     'lhs_module' => 'SecurityGroups',
     'lhs_table' => 'securitygroups',
@@ -6500,7 +5569,7 @@
   ),
   'securitygroups_cases' => 
   array (
-    'id' => 'a99252c2-d4b3-9a1c-ec28-52c07ce82723',
+    'id' => '9ba33d6d-cfa4-2d1b-53e6-52c0bd980bc3',
     'relationship_name' => 'securitygroups_cases',
     'lhs_module' => 'SecurityGroups',
     'lhs_table' => 'securitygroups',
@@ -6519,7 +5588,7 @@
   ),
   'securitygroups_contacts' => 
   array (
-    'id' => 'a9b46849-947d-1769-f36b-52c07cc8e458',
+    'id' => '9bc57b0b-473d-26c8-214f-52c0bd9c592f',
     'relationship_name' => 'securitygroups_contacts',
     'lhs_module' => 'SecurityGroups',
     'lhs_table' => 'securitygroups',
@@ -6538,7 +5607,7 @@
   ),
   'securitygroups_documents' => 
   array (
-    'id' => 'a9d66519-cc2a-ed4a-77d6-52c07c94e73b',
+    'id' => '9be772bc-6bc2-8346-62b1-52c0bdc39abd',
     'relationship_name' => 'securitygroups_documents',
     'lhs_module' => 'SecurityGroups',
     'lhs_table' => 'securitygroups',
@@ -6557,7 +5626,7 @@
   ),
   'securitygroups_emails' => 
   array (
-    'id' => 'a9f76851-da67-b920-17ff-52c07cc3662e',
+    'id' => '9c097086-db15-73b7-7267-52c0bdc846f8',
     'relationship_name' => 'securitygroups_emails',
     'lhs_module' => 'SecurityGroups',
     'lhs_table' => 'securitygroups',
@@ -6576,7 +5645,7 @@
   ),
   'securitygroups_emailtemplates' => 
   array (
-    'id' => 'aa196d37-a7de-aa5a-cbb3-52c07ce74f25',
+    'id' => '9c2b83c2-b6ab-e047-4cf0-52c0bd12c218',
     'relationship_name' => 'securitygroups_emailtemplates',
     'lhs_module' => 'SecurityGroups',
     'lhs_table' => 'securitygroups',
@@ -6595,7 +5664,7 @@
   ),
   'securitygroups_leads' => 
   array (
-    'id' => 'aa3a45ab-4ab1-81f0-5969-52c07c3eb780',
+    'id' => '9c50752d-f53b-5016-9276-52c0bd9eb728',
     'relationship_name' => 'securitygroups_leads',
     'lhs_module' => 'SecurityGroups',
     'lhs_table' => 'securitygroups',
@@ -6614,7 +5683,7 @@
   ),
   'securitygroups_meetings' => 
   array (
-    'id' => 'aa5b31a0-14b3-1f45-b875-52c07c1c4d3a',
+    'id' => '9c72890f-19e7-fef2-587b-52c0bd782d28',
     'relationship_name' => 'securitygroups_meetings',
     'lhs_module' => 'SecurityGroups',
     'lhs_table' => 'securitygroups',
@@ -6633,7 +5702,7 @@
   ),
   'securitygroups_notes' => 
   array (
-    'id' => 'aa8ad65f-8568-cc4c-6a09-52c07c246d19',
+    'id' => '9c946aba-4a1a-d30e-76ee-52c0bd95b66d',
     'relationship_name' => 'securitygroups_notes',
     'lhs_module' => 'SecurityGroups',
     'lhs_table' => 'securitygroups',
@@ -6652,7 +5721,7 @@
   ),
   'securitygroups_opportunities' => 
   array (
-    'id' => 'aaaf95ef-b686-12f9-cd74-52c07c43ccd9',
+    'id' => '9cb66dd0-d8bb-1565-9fe6-52c0bdae8a25',
     'relationship_name' => 'securitygroups_opportunities',
     'lhs_module' => 'SecurityGroups',
     'lhs_table' => 'securitygroups',
@@ -6671,7 +5740,7 @@
   ),
   'securitygroups_project' => 
   array (
-    'id' => 'aad12bf2-1ac2-f3d5-3c64-52c07c690f8b',
+    'id' => '9ce14837-6d2b-e385-91d8-52c0bd52d950',
     'relationship_name' => 'securitygroups_project',
     'lhs_module' => 'SecurityGroups',
     'lhs_table' => 'securitygroups',
@@ -6690,7 +5759,7 @@
   ),
   'securitygroups_project_task' => 
   array (
-    'id' => 'aaf389d0-17da-d963-16e1-52c07cafb721',
+    'id' => '9d036754-5823-7e0c-a85b-52c0bddc78bc',
     'relationship_name' => 'securitygroups_project_task',
     'lhs_module' => 'SecurityGroups',
     'lhs_table' => 'securitygroups',
@@ -6709,7 +5778,7 @@
   ),
   'securitygroups_prospect_lists' => 
   array (
-    'id' => 'ab15e249-ae9f-c683-1ab3-52c07c4145c7',
+    'id' => '9d25691c-ba7a-0654-d437-52c0bd76393a',
     'relationship_name' => 'securitygroups_prospect_lists',
     'lhs_module' => 'SecurityGroups',
     'lhs_table' => 'securitygroups',
@@ -6728,7 +5797,7 @@
   ),
   'securitygroups_prospects' => 
   array (
-    'id' => 'ab37be6b-6c8e-4fe2-ccec-52c07c30cf56',
+    'id' => '9d47e394-a91a-c48a-6cf1-52c0bd2215cf',
     'relationship_name' => 'securitygroups_prospects',
     'lhs_module' => 'SecurityGroups',
     'lhs_table' => 'securitygroups',
@@ -6747,7 +5816,7 @@
   ),
   'securitygroups_tasks' => 
   array (
-    'id' => 'ab6751cd-dd95-2c31-5b02-52c07c152a78',
+    'id' => '9d69f1a7-ded1-3af7-420f-52c0bd3dcf6e',
     'relationship_name' => 'securitygroups_tasks',
     'lhs_module' => 'SecurityGroups',
     'lhs_table' => 'securitygroups',
@@ -6766,7 +5835,7 @@
   ),
   'securitygroups_users' => 
   array (
-    'id' => 'ab892580-8b87-a026-7eec-52c07c81a826',
+    'id' => '9d8d72a8-8caa-d38b-baec-52c0bd12346d',
     'relationship_name' => 'securitygroups_users',
     'lhs_module' => 'SecurityGroups',
     'lhs_table' => 'securitygroups',
@@ -6785,7 +5854,7 @@
   ),
   'zr2_reportcontainer_zr2_report' => 
   array (
-    'id' => 'abacf7f0-24a0-f90e-053f-52c07c1c0c79',
+    'id' => '9db20f10-ef6e-122f-712b-52c0bd9c4445',
     'relationship_name' => 'zr2_reportcontainer_zr2_report',
     'lhs_module' => 'zr2_ReportContainer',
     'lhs_table' => 'zr2_reportcontainer',
@@ -6804,7 +5873,7 @@
   ),
   'zr2_reportparameterlink_zr2_querytemplate' => 
   array (
-    'id' => 'abdb4885-9e89-2cf7-0015-52c07cbd770e',
+    'id' => '9de22e54-5971-e234-8bbc-52c0bd2a0710',
     'relationship_name' => 'zr2_reportparameterlink_zr2_querytemplate',
     'lhs_module' => 'zr2_QueryTemplate',
     'lhs_table' => 'zr2_querytemplate',
@@ -6823,7 +5892,7 @@
   ),
   'zr2_reportparameterlink_zr2_reportparameter' => 
   array (
-    'id' => 'abff4888-5255-40e3-7bbb-52c07c9ee817',
+    'id' => '9e086ab9-b80c-9c3d-784d-52c0bd93895b',
     'relationship_name' => 'zr2_reportparameterlink_zr2_reportparameter',
     'lhs_module' => 'zr2_ReportParameter',
     'lhs_table' => 'zr2_reportparameter',
@@ -6842,7 +5911,7 @@
   ),
   'zr2_reportparameterlink_zr2_reporttemplate' => 
   array (
-    'id' => 'ac204adc-36e8-0267-2888-52c07c49d075',
+    'id' => '9e30d955-d12f-518f-df9c-52c0bdf24805',
     'relationship_name' => 'zr2_reportparameterlink_zr2_reporttemplate',
     'lhs_module' => 'zr2_ReportTemplate',
     'lhs_table' => 'zr2_reporttemplate',
@@ -6856,6 +5925,937 @@
     'relationship_type' => 'many-to-many',
     'relationship_role_column' => NULL,
     'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'campaigns_modified_user' => 
+  array (
+    'id' => 'a5190e2e-57ac-73f7-d5aa-52c0bd0783fd',
+    'relationship_name' => 'campaigns_modified_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Campaigns',
+    'rhs_table' => 'campaigns',
+    'rhs_key' => 'modified_user_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'campaigns_created_by' => 
+  array (
+    'id' => 'a82a04ef-c387-3224-7558-52c0bd268184',
+    'relationship_name' => 'campaigns_created_by',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Campaigns',
+    'rhs_table' => 'campaigns',
+    'rhs_key' => 'created_by',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'campaigns_assigned_user' => 
+  array (
+    'id' => 'ab480309-d117-2598-f36b-52c0bd63c077',
+    'relationship_name' => 'campaigns_assigned_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Campaigns',
+    'rhs_table' => 'campaigns',
+    'rhs_key' => 'assigned_user_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'campaign_accounts' => 
+  array (
+    'id' => 'ad9205b9-b165-479a-76d5-52c0bddec2f6',
+    'relationship_name' => 'campaign_accounts',
+    'lhs_module' => 'Campaigns',
+    'lhs_table' => 'campaigns',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Accounts',
+    'rhs_table' => 'accounts',
+    'rhs_key' => 'campaign_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'campaign_contacts' => 
+  array (
+    'id' => 'afbb0368-11a5-1704-c06e-52c0bdd3a9a6',
+    'relationship_name' => 'campaign_contacts',
+    'lhs_module' => 'Campaigns',
+    'lhs_table' => 'campaigns',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Contacts',
+    'rhs_table' => 'contacts',
+    'rhs_key' => 'campaign_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'campaign_leads' => 
+  array (
+    'id' => 'b1e70a93-b132-716b-5263-52c0bdfb099e',
+    'relationship_name' => 'campaign_leads',
+    'lhs_module' => 'Campaigns',
+    'lhs_table' => 'campaigns',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Leads',
+    'rhs_table' => 'leads',
+    'rhs_key' => 'campaign_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'campaign_prospects' => 
+  array (
+    'id' => 'b40f0115-fdd7-d38a-a2c7-52c0bddd77d0',
+    'relationship_name' => 'campaign_prospects',
+    'lhs_module' => 'Campaigns',
+    'lhs_table' => 'campaigns',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Prospects',
+    'rhs_table' => 'prospects',
+    'rhs_key' => 'campaign_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'bug_emails' => 
+  array (
+    'id' => 'b450001a-31ba-0059-7fa0-52c0bdfdf388',
+    'relationship_name' => 'bug_emails',
+    'lhs_module' => 'Bugs',
+    'lhs_table' => 'bugs',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Emails',
+    'rhs_table' => 'emails',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Bugs',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'campaign_opportunities' => 
+  array (
+    'id' => 'b6310f14-180f-2fe9-f182-52c0bdd0d1d0',
+    'relationship_name' => 'campaign_opportunities',
+    'lhs_module' => 'Campaigns',
+    'lhs_table' => 'campaigns',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Opportunities',
+    'rhs_table' => 'opportunities',
+    'rhs_key' => 'campaign_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'campaign_email_marketing' => 
+  array (
+    'id' => 'b851096f-5145-3946-abd6-52c0bd0c30d0',
+    'relationship_name' => 'campaign_email_marketing',
+    'lhs_module' => 'Campaigns',
+    'lhs_table' => 'campaigns',
+    'lhs_key' => 'id',
+    'rhs_module' => 'EmailMarketing',
+    'rhs_table' => 'email_marketing',
+    'rhs_key' => 'campaign_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'campaign_emailman' => 
+  array (
+    'id' => 'ba5d0025-f4d4-0d28-e1e2-52c0bd5bd670',
+    'relationship_name' => 'campaign_emailman',
+    'lhs_module' => 'Campaigns',
+    'lhs_table' => 'campaigns',
+    'lhs_key' => 'id',
+    'rhs_module' => 'EmailMan',
+    'rhs_table' => 'emailman',
+    'rhs_key' => 'campaign_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'campaign_campaignlog' => 
+  array (
+    'id' => 'bc750448-02b7-7f16-d061-52c0bd7086ca',
+    'relationship_name' => 'campaign_campaignlog',
+    'lhs_module' => 'Campaigns',
+    'lhs_table' => 'campaigns',
+    'lhs_key' => 'id',
+    'rhs_module' => 'CampaignLog',
+    'rhs_table' => 'campaign_log',
+    'rhs_key' => 'campaign_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'campaign_assigned_user' => 
+  array (
+    'id' => 'be8c0572-341f-9a60-a554-52c0bde1b3d9',
+    'relationship_name' => 'campaign_assigned_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Campaigns',
+    'rhs_table' => 'campaigns',
+    'rhs_key' => 'assigned_user_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'campaign_modified_user' => 
+  array (
+    'id' => 'c0aa0f76-e32b-498e-f01d-52c0bd06ee3e',
+    'relationship_name' => 'campaign_modified_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Campaigns',
+    'rhs_table' => 'campaigns',
+    'rhs_key' => 'modified_user_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'prospectlists_assigned_user' => 
+  array (
+    'id' => 'd28305fa-d8ba-0727-e924-52c0bde3cddc',
+    'relationship_name' => 'prospectlists_assigned_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'prospectlists',
+    'rhs_table' => 'prospect_lists',
+    'rhs_key' => 'assigned_user_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'bug_notes' => 
+  array (
+    'id' => 'd93006bf-af33-7f46-8646-52c0bd02f6ab',
+    'relationship_name' => 'bug_notes',
+    'lhs_module' => 'Bugs',
+    'lhs_table' => 'bugs',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Notes',
+    'rhs_table' => 'notes',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Bugs',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'prospects_modified_user' => 
+  array (
+    'id' => 'e0bc0b01-7252-687c-c378-52c0bd4ef09e',
+    'relationship_name' => 'prospects_modified_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Prospects',
+    'rhs_table' => 'prospects',
+    'rhs_key' => 'modified_user_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'prospects_created_by' => 
+  array (
+    'id' => 'e3cf06bc-ac8f-bfff-f989-52c0bd56699a',
+    'relationship_name' => 'prospects_created_by',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Prospects',
+    'rhs_table' => 'prospects',
+    'rhs_key' => 'created_by',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'prospects_assigned_user' => 
+  array (
+    'id' => 'e6510e60-fd95-1e0c-bd2c-52c0bdba7fc7',
+    'relationship_name' => 'prospects_assigned_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Prospects',
+    'rhs_table' => 'prospects',
+    'rhs_key' => 'assigned_user_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'prospects_email_addresses' => 
+  array (
+    'id' => 'e8a80900-33bb-c9ad-a6e2-52c0bd8a2455',
+    'relationship_name' => 'prospects_email_addresses',
+    'lhs_module' => 'Prospects',
+    'lhs_table' => 'prospects',
+    'lhs_key' => 'id',
+    'rhs_module' => 'EmailAddresses',
+    'rhs_table' => 'email_addresses',
+    'rhs_key' => 'id',
+    'join_table' => 'email_addr_bean_rel',
+    'join_key_lhs' => 'bean_id',
+    'join_key_rhs' => 'email_address_id',
+    'relationship_type' => 'many-to-many',
+    'relationship_role_column' => 'bean_module',
+    'relationship_role_column_value' => 'Prospects',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'prospects_email_addresses_primary' => 
+  array (
+    'id' => 'eaf1041d-fb8a-9729-4733-52c0bd05561b',
+    'relationship_name' => 'prospects_email_addresses_primary',
+    'lhs_module' => 'Prospects',
+    'lhs_table' => 'prospects',
+    'lhs_key' => 'id',
+    'rhs_module' => 'EmailAddresses',
+    'rhs_table' => 'email_addresses',
+    'rhs_key' => 'id',
+    'join_table' => 'email_addr_bean_rel',
+    'join_key_lhs' => 'bean_id',
+    'join_key_rhs' => 'email_address_id',
+    'relationship_type' => 'many-to-many',
+    'relationship_role_column' => 'primary_address',
+    'relationship_role_column_value' => '1',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'prospect_tasks' => 
+  array (
+    'id' => 'ed300b41-d662-696b-047e-52c0bd7c85ad',
+    'relationship_name' => 'prospect_tasks',
+    'lhs_module' => 'Prospects',
+    'lhs_table' => 'prospects',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Tasks',
+    'rhs_table' => 'tasks',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Prospects',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'leads_modified_user' => 
+  array (
+    'id' => 'eed0d273-87c7-196e-b4ef-52c0bdf3c0c3',
+    'relationship_name' => 'leads_modified_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Leads',
+    'rhs_table' => 'leads',
+    'rhs_key' => 'modified_user_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'leads_created_by' => 
+  array (
+    'id' => 'ef214a06-91cb-fc81-1d61-52c0bd4f48c1',
+    'relationship_name' => 'leads_created_by',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Leads',
+    'rhs_table' => 'leads',
+    'rhs_key' => 'created_by',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'leads_assigned_user' => 
+  array (
+    'id' => 'ef45b814-280a-e0dd-6b5c-52c0bd609414',
+    'relationship_name' => 'leads_assigned_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Leads',
+    'rhs_table' => 'leads',
+    'rhs_key' => 'assigned_user_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'leads_email_addresses' => 
+  array (
+    'id' => 'ef67aa66-8950-c524-fc6e-52c0bd803037',
+    'relationship_name' => 'leads_email_addresses',
+    'lhs_module' => 'Leads',
+    'lhs_table' => 'leads',
+    'lhs_key' => 'id',
+    'rhs_module' => 'EmailAddresses',
+    'rhs_table' => 'email_addresses',
+    'rhs_key' => 'id',
+    'join_table' => 'email_addr_bean_rel',
+    'join_key_lhs' => 'bean_id',
+    'join_key_rhs' => 'email_address_id',
+    'relationship_type' => 'many-to-many',
+    'relationship_role_column' => 'bean_module',
+    'relationship_role_column_value' => 'Leads',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'prospect_notes' => 
+  array (
+    'id' => 'ef710f05-017d-92fb-f18e-52c0bdb0af52',
+    'relationship_name' => 'prospect_notes',
+    'lhs_module' => 'Prospects',
+    'lhs_table' => 'prospects',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Notes',
+    'rhs_table' => 'notes',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Prospects',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'leads_email_addresses_primary' => 
+  array (
+    'id' => 'ef974685-8c1d-0212-e166-52c0bd151843',
+    'relationship_name' => 'leads_email_addresses_primary',
+    'lhs_module' => 'Leads',
+    'lhs_table' => 'leads',
+    'lhs_key' => 'id',
+    'rhs_module' => 'EmailAddresses',
+    'rhs_table' => 'email_addresses',
+    'rhs_key' => 'id',
+    'join_table' => 'email_addr_bean_rel',
+    'join_key_lhs' => 'bean_id',
+    'join_key_rhs' => 'email_address_id',
+    'relationship_type' => 'many-to-many',
+    'relationship_role_column' => 'primary_address',
+    'relationship_role_column_value' => '1',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'lead_direct_reports' => 
+  array (
+    'id' => 'efbb94c7-d932-3f88-8fd0-52c0bd61e61c',
+    'relationship_name' => 'lead_direct_reports',
+    'lhs_module' => 'Leads',
+    'lhs_table' => 'leads',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Leads',
+    'rhs_table' => 'leads',
+    'rhs_key' => 'reports_to_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'lead_tasks' => 
+  array (
+    'id' => 'efdd28a5-5b5c-59a5-56ef-52c0bd662edc',
+    'relationship_name' => 'lead_tasks',
+    'lhs_module' => 'Leads',
+    'lhs_table' => 'leads',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Tasks',
+    'rhs_table' => 'tasks',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Leads',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'lead_notes' => 
+  array (
+    'id' => 'f0003145-2f68-8202-6c52-52c0bdef98ce',
+    'relationship_name' => 'lead_notes',
+    'lhs_module' => 'Leads',
+    'lhs_table' => 'leads',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Notes',
+    'rhs_table' => 'notes',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Leads',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'lead_meetings' => 
+  array (
+    'id' => 'f021db61-05d0-b265-0ea1-52c0bd0598f2',
+    'relationship_name' => 'lead_meetings',
+    'lhs_module' => 'Leads',
+    'lhs_table' => 'leads',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Meetings',
+    'rhs_table' => 'meetings',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Leads',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'lead_calls' => 
+  array (
+    'id' => 'f0430644-25a8-46f4-ecfd-52c0bd4af093',
+    'relationship_name' => 'lead_calls',
+    'lhs_module' => 'Leads',
+    'lhs_table' => 'leads',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Calls',
+    'rhs_table' => 'calls',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Leads',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'lead_emails' => 
+  array (
+    'id' => 'f0641895-eb2b-5052-3f44-52c0bd9aea7f',
+    'relationship_name' => 'lead_emails',
+    'lhs_module' => 'Leads',
+    'lhs_table' => 'leads',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Emails',
+    'rhs_table' => 'emails',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Leads',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'lead_campaign_log' => 
+  array (
+    'id' => 'f0851fb7-9592-3e7a-0f1c-52c0bdd13441',
+    'relationship_name' => 'lead_campaign_log',
+    'lhs_module' => 'Leads',
+    'lhs_table' => 'leads',
+    'lhs_key' => 'id',
+    'rhs_module' => 'CampaignLog',
+    'rhs_table' => 'campaign_log',
+    'rhs_key' => 'target_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'target_type',
+    'relationship_role_column_value' => 'Leads',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'cases_modified_user' => 
+  array (
+    'id' => 'f1364f21-08ef-4c84-94b4-52c0bd1adc4f',
+    'relationship_name' => 'cases_modified_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Cases',
+    'rhs_table' => 'cases',
+    'rhs_key' => 'modified_user_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'cases_created_by' => 
+  array (
+    'id' => 'f16b9d0a-78a6-8f03-84ba-52c0bde18567',
+    'relationship_name' => 'cases_created_by',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Cases',
+    'rhs_table' => 'cases',
+    'rhs_key' => 'created_by',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'prospect_meetings' => 
+  array (
+    'id' => 'f18b01ab-5e5a-55ff-630e-52c0bdbdc55b',
+    'relationship_name' => 'prospect_meetings',
+    'lhs_module' => 'Prospects',
+    'lhs_table' => 'prospects',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Meetings',
+    'rhs_table' => 'meetings',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Prospects',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'cases_assigned_user' => 
+  array (
+    'id' => 'f1988e68-f701-b062-f3fa-52c0bd344434',
+    'relationship_name' => 'cases_assigned_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Cases',
+    'rhs_table' => 'cases',
+    'rhs_key' => 'assigned_user_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'case_calls' => 
+  array (
+    'id' => 'f1bee5f9-4326-743a-be93-52c0bda9ff4b',
+    'relationship_name' => 'case_calls',
+    'lhs_module' => 'Cases',
+    'lhs_table' => 'cases',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Calls',
+    'rhs_table' => 'calls',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Cases',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'case_tasks' => 
+  array (
+    'id' => 'f1e510b9-a6ca-6a84-874f-52c0bda6b059',
+    'relationship_name' => 'case_tasks',
+    'lhs_module' => 'Cases',
+    'lhs_table' => 'cases',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Tasks',
+    'rhs_table' => 'tasks',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Cases',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'case_notes' => 
+  array (
+    'id' => 'f208f090-020c-188a-c127-52c0bdd22aa8',
+    'relationship_name' => 'case_notes',
+    'lhs_module' => 'Cases',
+    'lhs_table' => 'cases',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Notes',
+    'rhs_table' => 'notes',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Cases',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'case_meetings' => 
+  array (
+    'id' => 'f22b2397-08b9-f947-b693-52c0bd9e0f34',
+    'relationship_name' => 'case_meetings',
+    'lhs_module' => 'Cases',
+    'lhs_table' => 'cases',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Meetings',
+    'rhs_table' => 'meetings',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Cases',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'case_emails' => 
+  array (
+    'id' => 'f24ea2c3-5a93-50e1-b575-52c0bd263344',
+    'relationship_name' => 'case_emails',
+    'lhs_module' => 'Cases',
+    'lhs_table' => 'cases',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Emails',
+    'rhs_table' => 'emails',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Cases',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'bugs_modified_user' => 
+  array (
+    'id' => 'f3e0af11-8cfa-d87c-24b1-52c0bdd05e0e',
+    'relationship_name' => 'bugs_modified_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Bugs',
+    'rhs_table' => 'bugs',
+    'rhs_key' => 'modified_user_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'prospect_calls' => 
+  array (
+    'id' => 'f3e10211-4b23-3840-2928-52c0bdb96e96',
+    'relationship_name' => 'prospect_calls',
+    'lhs_module' => 'Prospects',
+    'lhs_table' => 'prospects',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Calls',
+    'rhs_table' => 'calls',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Prospects',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'bugs_created_by' => 
+  array (
+    'id' => 'f411824e-1057-24f6-bfa0-52c0bdb9503f',
+    'relationship_name' => 'bugs_created_by',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Bugs',
+    'rhs_table' => 'bugs',
+    'rhs_key' => 'created_by',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'prospect_emails' => 
+  array (
+    'id' => 'f74408e2-856c-286e-ded3-52c0bde26385',
+    'relationship_name' => 'prospect_emails',
+    'lhs_module' => 'Prospects',
+    'lhs_table' => 'prospects',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Emails',
+    'rhs_table' => 'emails',
+    'rhs_key' => 'parent_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'parent_type',
+    'relationship_role_column_value' => 'Prospects',
+    'reverse' => '0',
+    'deleted' => '0',
+  ),
+  'prospect_campaign_log' => 
+  array (
+    'id' => 'f9bd0b2f-6272-bc30-eb43-52c0bd760d0c',
+    'relationship_name' => 'prospect_campaign_log',
+    'lhs_module' => 'Prospects',
+    'lhs_table' => 'prospects',
+    'lhs_key' => 'id',
+    'rhs_module' => 'CampaignLog',
+    'rhs_table' => 'campaign_log',
+    'rhs_key' => 'target_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => 'target_type',
+    'relationship_role_column_value' => 'Prospects',
     'reverse' => '0',
     'deleted' => '0',
   ),
